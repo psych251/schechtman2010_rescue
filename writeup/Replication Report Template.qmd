@@ -1,6 +1,6 @@
 ---
-title: "Replication of Study X by Sample & Sample (20xx, Psychological Science)"
-author: "Replication Author[s] (contact information)"
+title: "Replication of Negative Valence Widens Generalization of Learning by Schechtman, E., Laufer, O., & Paz, R (2010, Journal of Neuroscience)"
+author: "Nastasia Klevak (nklevak@stanford.edu)"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 format:
   html:
@@ -12,8 +12,13 @@ format:
 
 ## Introduction
 
-[No abstract is needed.]  Each replication project will have a straightforward, no frills report of the study and results.  These reports will be publicly available as supplementary material for the aggregate report(s) of the project as a whole.  Also, to maximize project integrity, the intro and methods will be written and critiqued in advance of data collection.  Introductions can be just 1-2 paragraphs clarifying the main idea of the original study, the target finding for replication, and any other essential information.  It will NOT have a literature review -- that is in the original publication. You can write both the introduction and the methods in past tense.  
+**choice justification:** I chose this project to rescue and replicate because it is relevant to my research interests and will allow me to gain skills that I value gaining practice in. My main research interests are in decision making, cognitive control, and how understanding core functions of human cognition can help us better understand potential cognitive differences related to different mental health conditions. Through working on this paper and replicating this experiment, I can gain a better understanding of how generalizing works in the brain and how people make sub-concious decisions about reacting to stimuli and how much to generalize. Additionally, in the past I've worked with JSPsych, on neuroimaging, and on computational experiments, but I have never fully designed or run a behavioral experiment on prolific/MTurk completely on my own. Through doing this project, I hope to expand upon my experimental design and implementation skills.
 
+**stimuli, procedures, and challenges:** For this experiment, I will need to use different frequency noises as stimuli in order to test how valence affects generalization. This will be an online behavioral experiment done on Prolific, and the study includes two stages (acquisition and generalization) that will be interspersed for participants. In the paper, the study also had a second follow up experiment where participants were recalled to do a loss aversion task, in order to understand the loss aversion rate and how it impacts generalization, so I may have to recall the participants to do a second online study as well. I will code/adapt this study in JSPsych and upload it to prolific--this may be a challenge as I've never worked with auditory stimuli before. I will then analyze the data in a similar way to the paper, and will replicate Figures 1 and 2. Finally, I will add attention and manipulation checks to the code (if it isn't already there), and try to identify if there are any errors in the original/replication code that need correcting. 
+
+**repository link:** https://github.com/psych251/schechtman2010_rescue
+
+**original paper link:** https://github.com/psych251/schechtman2010_rescue/blob/main/original_paper/10460.pdf
 
 ## Methods
 
