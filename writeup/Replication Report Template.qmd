@@ -16,9 +16,9 @@ format:
 
 **stimuli, procedures, and challenges:** For this experiment, I will need to use different frequency noises as stimuli in order to test how valence affects generalization. This will be an online behavioral experiment done on Prolific, and the study includes two stages (acquisition and generalization) that will be interspersed for participants. In the paper, the study also had a second follow up experiment where participants were recalled to do a loss aversion task, in order to understand the loss aversion rate and how it impacts generalization, so I may have to recall the participants to do a second online study as well. I will code/adapt this study in JSPsych and upload it to prolific--this may be a challenge as I've never worked with auditory stimuli before. I will then analyze the data in a similar way to the paper, and will replicate Figures 1 and 2. Finally, I will add attention and manipulation checks to the code (if it isn't already there), and try to identify if there are any errors in the original/replication code that need correcting. 
 
-**repository link:** https://github.com/psych251/schechtman2010_rescue
+**repository link:** <https://github.com/psych251/schechtman2010_rescue>
 
-**original paper link:** https://github.com/psych251/schechtman2010_rescue/blob/main/original_paper/10460.pdf
+**original paper link:** <https://github.com/psych251/schechtman2010_rescue/blob/main/original_paper/10460.pdf>
 
 ## Methods
 
