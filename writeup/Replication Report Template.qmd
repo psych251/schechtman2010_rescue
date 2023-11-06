@@ -20,6 +20,11 @@ format:
 
 **original paper link:** <https://github.com/psych251/schechtman2010_rescue/blob/main/original_paper/10460.pdf>
 
+**link to pilot A paradigm:** <https://bxxtztxkhn.cognition.run>
+**note about pilot A:** I had some issues with data analysis so far, but I got my pilot to run and have my data, as well as have the analysis code.
+**link to my current analysis code pipeline:**
+**link to my data:**
+
 ## Methods
 
 ### Power Analysis
