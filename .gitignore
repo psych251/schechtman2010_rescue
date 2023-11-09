@@ -50,6 +50,8 @@ rsconnect/
 
 # ignore all CSVs
 *.csv
+!data/pilotA/subject_data_pilotA_processed.csv
+!data/pilotA/*
 # unless they end with -anon
 !*-anon.csv
 
