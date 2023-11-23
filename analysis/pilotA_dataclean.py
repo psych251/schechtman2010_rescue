@@ -24,7 +24,7 @@ def extract_data():
     # iterate over each subject (file)
     for filename in subjectfiles:
         fullname = path + filename
-        df_curr = pd.read_csv (fullname)
+        df_curr = pd.read_csv(fullname)
         print(df_curr)
         subject_trial_data = pd.concat([subject_trial_data,df_curr])
     
