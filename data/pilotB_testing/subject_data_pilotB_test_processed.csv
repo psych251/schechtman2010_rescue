@@ -485,6 +485,492 @@
 483,,,,html-keyboard-response,483,609246,17,1,None,,,,,,,,,,,,,,,True,True,no_key
 484,534.0,bonus earned during this period: $0.24<br><br>Press any key to continue.,,html-keyboard-response,484,609791,17,1,80.0,,,,,,,,,,,,,,,True,True,positive
 485,19421.0,,,survey-text,485,629224,17,1,None,,,,,,,,,,,,,,"{""Q0"":""I'm not sure if the sounds are properly playing during acquisition stage""}",True,True,no_key
+0,4242.0,"<p>Before we begin this experiment, please make sure your sound is on and un-muted. When you are ready, press the button below!</p>",0.0,html-button-response,0,4259,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+1,95588.0,,,instructions,1,99850,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+2,2587.0,sound/500,0.0,audio-button-response,2,103444,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+3,1144.0,sound/500,0.0,audio-button-response,3,104591,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+4,877.0,sound/500,0.0,audio-button-response,4,105470,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+5,6518.0,,,instructions,5,111990,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+6,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,6,113422,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+7,,sound/700,,audio-keyboard-response,7,115926,19,1,None,acquisition,anything,negative,1.0,700.0,300.0,p,700.0,False,,,,,,False,False,no_key
+8,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,8,117030,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+9,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,9,118549,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+10,,sound/500,,audio-keyboard-response,10,121053,19,1,None,acquisition,anything,neutral,1.0,700.0,300.0,p,500.0,,,,,,,False,False,no_key
+11,,"<font size=""100%""></font>",,html-keyboard-response,11,122157,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+12,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,12,123661,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+13,406.0,sound/500,,audio-keyboard-response,13,124067,19,1,80.0,acquisition,anything,neutral,1.0,700.0,300.0,p,500.0,,,,,,,False,False,positive
+14,,"<font size=""100%""></font>",,html-keyboard-response,14,125170,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+15,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,15,126673,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+16,389.0,sound/500,,audio-keyboard-response,16,127071,19,1,80.0,acquisition,anything,neutral,1.0,700.0,300.0,p,500.0,,,,,,,False,False,positive
+17,,"<font size=""100%""></font>",,html-keyboard-response,17,128174,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+18,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,18,129755,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+19,554.0,sound/700,,audio-keyboard-response,19,130311,19,1,80.0,acquisition,q,negative,1.0,700.0,300.0,p,700.0,,,,,,,False,False,positive
+20,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,20,131413,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+21,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,21,132916,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+22,1434.0,sound/300,,audio-keyboard-response,22,134346,19,1,81.0,acquisition,p,positive,1.0,700.0,300.0,p,300.0,,,,,,,False,False,negative
+23,,"<font size=""100%"" weight=bold> + $0.00 </font>",,html-keyboard-response,23,135449,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+24,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,24,136953,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+25,676.0,sound/700,,audio-keyboard-response,25,137624,19,1,80.0,acquisition,q,negative,1.0,700.0,300.0,p,700.0,,,,,,,False,False,positive
+26,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,26,138727,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+27,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,27,140230,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+28,409.0,sound/700,,audio-keyboard-response,28,140644,19,1,81.0,acquisition,q,negative,1.0,700.0,300.0,p,700.0,,,,,,,False,False,negative
+29,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,29,141747,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+30,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,30,143251,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+31,621.0,sound/300,,audio-keyboard-response,31,143880,19,1,80.0,acquisition,p,positive,1.0,700.0,300.0,p,300.0,,,,,,,False,False,positive
+32,,"<font size=""100%"" weight=bold> + $0.00 </font>",,html-keyboard-response,32,144985,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+33,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,33,146488,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+34,,sound/300,,audio-keyboard-response,34,148991,19,1,None,acquisition,anything,positive,1.0,700.0,300.0,p,300.0,True,,,,,,False,False,no_key
+35,,"<font size=""100%"" weight=bold> + $0.04</font>",,html-keyboard-response,35,150095,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+36,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,36,151599,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+37,485.0,sound/300,,audio-keyboard-response,37,152093,19,1,80.0,acquisition,p,positive,1.0,700.0,300.0,p,300.0,,,,,,,False,False,positive
+38,,"<font size=""100%"" weight=bold> + $0.00 </font>",,html-keyboard-response,38,153197,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+39,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,39,154701,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+40,679.0,sound/300,,audio-keyboard-response,40,155380,19,1,81.0,acquisition,p,positive,1.0,700.0,300.0,p,300.0,,,,,,,False,False,negative
+41,,"<font size=""100%"" weight=bold> + $0.00 </font>",,html-keyboard-response,41,156483,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+42,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,42,158091,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+43,787.0,sound/700,,audio-keyboard-response,43,158870,19,1,81.0,acquisition,q,negative,1.0,700.0,300.0,p,700.0,,,,,,,False,False,negative
+44,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,44,159974,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+45,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,45,161479,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+46,1059.0,sound/700,,audio-keyboard-response,46,162541,19,1,81.0,acquisition,q,negative,1.0,700.0,300.0,p,700.0,,,,,,,False,False,negative
+47,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,47,163645,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+48,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,48,165149,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+49,305.0,sound/700,,audio-keyboard-response,49,165457,19,1,81.0,acquisition,q,negative,1.0,700.0,300.0,p,700.0,,,,,,,False,False,negative
+50,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,50,166560,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+51,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,51,168064,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+52,,sound/700,,audio-keyboard-response,52,170569,19,1,None,acquisition,anything,negative,1.0,700.0,300.0,p,700.0,False,,,,,,False,False,no_key
+53,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,53,171673,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+54,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,54,173177,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+55,691.0,sound/500,,audio-keyboard-response,55,173868,19,1,80.0,acquisition,anything,neutral,1.0,700.0,300.0,p,500.0,,,,,,,False,False,positive
+56,,"<font size=""100%""></font>",,html-keyboard-response,56,174971,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+57,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,57,176477,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+58,612.0,sound/300,,audio-keyboard-response,58,177093,19,1,80.0,acquisition,p,positive,1.0,700.0,300.0,p,300.0,,,,,,,False,False,positive
+59,,"<font size=""100%"" weight=bold> + $0.00 </font>",,html-keyboard-response,59,178198,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+60,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,60,179730,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+61,662.0,sound/300,,audio-keyboard-response,61,182235,19,1,80.0,acquisition,anything,positive,1.0,700.0,300.0,p,300.0,True,,,,,,False,False,positive
+62,,"<font size=""100%"" weight=bold> + $0.04</font>",,html-keyboard-response,62,183339,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+63,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,63,184869,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+64,528.0,sound/500,,audio-keyboard-response,64,185397,19,1,81.0,acquisition,anything,neutral,1.0,700.0,300.0,p,500.0,,,,,,,False,False,negative
+65,,"<font size=""100%""></font>",,html-keyboard-response,65,186501,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+66,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,66,188005,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+67,517.0,sound/500,,audio-keyboard-response,67,188528,19,1,81.0,acquisition,anything,neutral,1.0,700.0,300.0,p,500.0,,,,,,,False,False,negative
+68,,"<font size=""100%""></font>",,html-keyboard-response,68,189633,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+69,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,69,191137,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+70,702.0,sound/300,,audio-keyboard-response,70,191847,19,1,80.0,acquisition,p,positive,1.0,700.0,300.0,p,300.0,,,,,,,False,False,positive
+71,,"<font size=""100%"" weight=bold> + $0.00 </font>",,html-keyboard-response,71,192952,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+72,2159.0,The total bonus amount of bonus you earned in this last period was $0.00.<br> Press any key to continue to the next step.,,html-keyboard-response,72,195619,19,1,32.0,,,,,,,,,,,,,,,True,True,neutral
+73,22937.0,,,instructions,73,218560,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+74,,,,html-keyboard-response,74,219467,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+75,755.0,sound/400,,audio-keyboard-response,75,220223,19,1,80.0,generalization,space,positive,1.0,700.0,300.0,p,,False,400.0,100.0,0.0,True,,False,False,positive
+76,,,,html-keyboard-response,76,221227,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+77,,,,html-keyboard-response,77,221732,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+78,505.0,sound/520,,audio-keyboard-response,78,222243,19,1,81.0,generalization,space,control,1.0,700.0,300.0,p,,False,,,1.0,,,False,False,negative
+79,,,,html-keyboard-response,79,223247,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+80,,,,html-keyboard-response,80,223753,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+81,496.0,sound/240,,audio-keyboard-response,81,224249,19,1,80.0,generalization,space,positive,1.0,700.0,300.0,p,,False,240.0,-60.0,2.0,True,,False,False,positive
+82,,,,html-keyboard-response,82,225254,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+83,,,,html-keyboard-response,83,225759,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+84,633.0,sound/900,,audio-keyboard-response,84,226397,19,1,32.0,generalization,space,control,1.0,700.0,300.0,p,,True,,,3.0,,,False,False,neutral
+85,,,,html-keyboard-response,85,227401,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+86,,,,html-keyboard-response,86,227906,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+87,717.0,sound/680,,audio-keyboard-response,87,228628,19,1,80.0,generalization,space,negative,1.0,700.0,300.0,p,,False,680.0,-20.0,4.0,False,,False,False,positive
+88,,,,html-keyboard-response,88,229632,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+89,,,,html-keyboard-response,89,230136,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+90,485.0,sound/500,,audio-keyboard-response,90,230622,19,1,80.0,generalization,space,control,1.0,700.0,300.0,p,,False,,,5.0,,,False,False,positive
+91,,,,html-keyboard-response,91,231633,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+92,,,,html-keyboard-response,92,232138,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+93,380.0,sound/920,,audio-keyboard-response,93,232520,19,1,81.0,generalization,space,control,1.0,700.0,300.0,p,,False,,,6.0,,,False,False,negative
+94,,,,html-keyboard-response,94,233640,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+95,,,,html-keyboard-response,95,234146,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+96,357.0,sound/700,,audio-keyboard-response,96,234506,19,1,80.0,generalization,q,negative,1.0,700.0,300.0,p,,False,,0.0,7.0,False,,False,False,positive
+97,,,,html-keyboard-response,97,235511,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+98,,,,html-keyboard-response,98,236017,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+99,505.0,sound/695,,audio-keyboard-response,99,236521,19,1,81.0,generalization,space,negative,1.0,700.0,300.0,p,,False,695.0,-5.0,8.0,True,,False,False,negative
+100,,,,html-keyboard-response,100,237526,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+101,,,,html-keyboard-response,101,238032,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+102,360.0,sound/300,,audio-keyboard-response,102,238384,19,1,81.0,generalization,p,positive,1.0,700.0,300.0,p,,False,,0.0,9.0,False,,False,False,negative
+103,,,,html-keyboard-response,103,239404,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+104,,,,html-keyboard-response,104,239910,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+105,432.0,sound/295,,audio-keyboard-response,105,240340,19,1,80.0,generalization,space,positive,1.0,700.0,300.0,p,,False,295.0,-5.0,10.0,True,,False,False,positive
+106,,,,html-keyboard-response,106,241344,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+107,,,,html-keyboard-response,107,241850,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+108,444.0,sound/360,,audio-keyboard-response,108,242303,19,1,80.0,generalization,space,positive,1.0,700.0,300.0,p,,False,360.0,60.0,11.0,True,,False,False,positive
+109,,,,html-keyboard-response,109,243308,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+110,,,,html-keyboard-response,110,243814,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+111,342.0,sound/700,,audio-keyboard-response,111,244157,19,1,81.0,generalization,q,negative,1.0,700.0,300.0,p,,True,,0.0,12.0,True,,False,False,negative
+112,,,,html-keyboard-response,112,245161,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+113,,,,html-keyboard-response,113,245668,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+114,299.0,sound/705,,audio-keyboard-response,114,245967,19,1,81.0,generalization,space,negative,1.0,700.0,300.0,p,,False,705.0,5.0,13.0,True,,False,False,negative
+115,,,,html-keyboard-response,115,246990,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+116,,,,html-keyboard-response,116,247495,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+117,311.0,sound/300,,audio-keyboard-response,117,247808,19,1,81.0,generalization,p,positive,1.0,700.0,300.0,p,,False,,0.0,14.0,False,,False,False,negative
+118,,,,html-keyboard-response,118,248813,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+119,,,,html-keyboard-response,119,249320,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+120,322.0,sound/320,,audio-keyboard-response,120,249640,19,1,81.0,generalization,space,positive,1.0,700.0,300.0,p,,False,320.0,20.0,15.0,False,,False,False,negative
+121,,,,html-keyboard-response,121,250646,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+122,,,,html-keyboard-response,122,251153,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+123,299.0,sound/800,,audio-keyboard-response,123,251454,19,1,81.0,generalization,space,negative,1.0,700.0,300.0,p,,False,800.0,100.0,16.0,True,,False,False,negative
+124,,,,html-keyboard-response,124,252460,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+125,,,,html-keyboard-response,125,252965,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+126,331.0,sound/305,,audio-keyboard-response,126,253301,19,1,81.0,generalization,space,positive,1.0,700.0,300.0,p,,False,305.0,5.0,17.0,False,,False,False,negative
+127,,,,html-keyboard-response,127,254305,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+128,,,,html-keyboard-response,128,254811,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+129,1509.0,sound/200,,audio-keyboard-response,129,256322,19,1,32.0,generalization,space,positive,1.0,700.0,300.0,p,,True,200.0,-100.0,18.0,False,,False,False,neutral
+130,,,,html-keyboard-response,130,257329,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+131,,,,html-keyboard-response,131,257835,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+132,711.0,sound/760,,audio-keyboard-response,132,258550,19,1,81.0,generalization,space,negative,1.0,700.0,300.0,p,,False,760.0,60.0,19.0,True,,False,False,negative
+133,,,,html-keyboard-response,133,259555,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+134,,,,html-keyboard-response,134,260061,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+135,319.0,sound/720,,audio-keyboard-response,135,260379,19,1,80.0,generalization,space,negative,1.0,700.0,300.0,p,,False,720.0,20.0,20.0,False,,False,False,positive
+136,,,,html-keyboard-response,136,261385,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+137,,,,html-keyboard-response,137,261892,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+138,340.0,sound/300,,audio-keyboard-response,138,262236,19,1,80.0,generalization,p,positive,1.0,700.0,300.0,p,,True,,0.0,21.0,True,,False,False,positive
+139,,,,html-keyboard-response,139,263241,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+140,,,,html-keyboard-response,140,263749,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+141,418.0,sound/700,,audio-keyboard-response,141,264174,19,1,81.0,generalization,q,negative,1.0,700.0,300.0,p,,True,,0.0,22.0,True,,False,False,negative
+142,,,,html-keyboard-response,142,265184,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+143,,,,html-keyboard-response,143,265692,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+144,290.0,sound/880,,audio-keyboard-response,144,265978,19,1,81.0,generalization,space,control,1.0,700.0,300.0,p,,False,,,23.0,,,False,False,negative
+145,,,,html-keyboard-response,145,266983,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+146,,,,html-keyboard-response,146,267491,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+147,311.0,sound/480,,audio-keyboard-response,147,267805,19,1,81.0,generalization,space,control,1.0,700.0,300.0,p,,False,,,24.0,,,False,False,negative
+148,,,,html-keyboard-response,148,268811,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+149,,,,html-keyboard-response,149,269320,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+150,223.0,sound/300,,audio-keyboard-response,150,269548,19,1,81.0,generalization,p,positive,1.0,700.0,300.0,p,,False,,0.0,25.0,False,,False,False,negative
+151,,,,html-keyboard-response,151,270553,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+152,,,,html-keyboard-response,152,271060,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+153,273.0,sound/700,,audio-keyboard-response,153,271336,19,1,81.0,generalization,q,negative,1.0,700.0,300.0,p,,True,,0.0,26.0,True,,False,False,negative
+154,,,,html-keyboard-response,154,272342,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+155,,,,html-keyboard-response,155,272850,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+156,403.0,sound/600,,audio-keyboard-response,156,273255,19,1,80.0,generalization,space,negative,1.0,700.0,300.0,p,,False,600.0,-100.0,27.0,False,,False,False,positive
+157,,,,html-keyboard-response,157,274260,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+158,,,,html-keyboard-response,158,274769,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+159,401.0,sound/280,,audio-keyboard-response,159,275170,19,1,80.0,generalization,space,positive,1.0,700.0,300.0,p,,False,280.0,-20.0,28.0,True,,False,False,positive
+160,,,,html-keyboard-response,160,276173,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+161,,,,html-keyboard-response,161,276681,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+162,389.0,sound/640,,audio-keyboard-response,162,277063,19,1,80.0,generalization,space,negative,1.0,700.0,300.0,p,,False,640.0,-60.0,29.0,False,,False,False,positive
+163,,,,html-keyboard-response,163,278176,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+164,2648.0,bonus earned during this period: $0.24<br><br>Press any key to continue.,,html-keyboard-response,164,280831,19,1,32.0,,,,,,,,,,,,,,,True,True,neutral
+165,3222.0,,,instructions,165,284059,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+166,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,166,285466,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+167,665.0,sound/700,,audio-keyboard-response,167,286137,19,1,80.0,acquisition,q,negative,2.0,700.0,300.0,p,700.0,,,,,,,False,False,positive
+168,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,168,287294,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+169,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,169,288801,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+170,621.0,sound/700,,audio-keyboard-response,170,289424,19,1,81.0,acquisition,q,negative,2.0,700.0,300.0,p,700.0,,,,,,,False,False,negative
+171,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,171,290531,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+172,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,172,292036,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+173,816.0,sound/300,,audio-keyboard-response,173,292848,19,1,80.0,acquisition,p,positive,2.0,700.0,300.0,p,300.0,,,,,,,False,False,positive
+174,,"<font size=""100%"" weight=bold> + $0.00 </font>",,html-keyboard-response,174,293953,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+175,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,175,295461,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+176,711.0,sound/300,,audio-keyboard-response,176,296177,19,1,80.0,acquisition,p,positive,2.0,700.0,300.0,p,300.0,,,,,,,False,False,positive
+177,,"<font size=""100%"" weight=bold> + $0.00 </font>",,html-keyboard-response,177,297283,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+178,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,178,298799,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+179,882.0,sound/300,,audio-keyboard-response,179,301309,19,1,81.0,acquisition,anything,positive,2.0,700.0,300.0,p,300.0,True,,,,,,False,False,negative
+180,,"<font size=""100%"" weight=bold> + $0.04</font>",,html-keyboard-response,180,302417,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+181,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,181,303925,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+182,604.0,sound/700,,audio-keyboard-response,182,304534,19,1,81.0,acquisition,q,negative,2.0,700.0,300.0,p,700.0,,,,,,,False,False,negative
+183,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,183,305640,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+184,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,184,307149,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+185,1013.0,sound/500,,audio-keyboard-response,185,308172,19,1,80.0,acquisition,anything,neutral,2.0,700.0,300.0,p,500.0,,,,,,,False,False,positive
+186,,"<font size=""100%""></font>",,html-keyboard-response,186,309277,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+187,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,187,310787,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+188,,sound/700,,audio-keyboard-response,188,313297,19,1,None,acquisition,anything,negative,2.0,700.0,300.0,p,700.0,False,,,,,,False,False,no_key
+189,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,189,314404,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+190,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,190,315913,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+191,653.0,sound/300,,audio-keyboard-response,191,316570,19,1,81.0,acquisition,p,positive,2.0,700.0,300.0,p,300.0,,,,,,,False,False,negative
+192,,"<font size=""100%"" weight=bold> + $0.00 </font>",,html-keyboard-response,192,317677,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+193,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,193,319186,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+194,711.0,sound/500,,audio-keyboard-response,194,319901,19,1,80.0,acquisition,anything,neutral,2.0,700.0,300.0,p,500.0,,,,,,,False,False,positive
+195,,"<font size=""100%""></font>",,html-keyboard-response,195,321009,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+196,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,196,322571,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+197,415.0,sound/500,,audio-keyboard-response,197,322982,19,1,81.0,acquisition,anything,neutral,2.0,700.0,300.0,p,500.0,,,,,,,False,False,negative
+198,,"<font size=""100%""></font>",,html-keyboard-response,198,324157,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+199,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,199,325666,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+200,496.0,sound/700,,audio-keyboard-response,200,326169,19,1,80.0,acquisition,q,negative,2.0,700.0,300.0,p,700.0,,,,,,,False,False,positive
+201,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,201,327277,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+202,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,202,328786,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+203,624.0,sound/700,,audio-keyboard-response,203,331573,19,1,80.0,acquisition,anything,negative,2.0,700.0,300.0,p,700.0,False,,,,,,False,False,positive
+204,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,204,332681,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+205,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,205,334189,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+206,592.0,sound/300,,audio-keyboard-response,206,336697,19,1,81.0,acquisition,anything,positive,2.0,700.0,300.0,p,300.0,True,,,,,,False,False,negative
+207,,"<font size=""100%"" weight=bold> + $0.04</font>",,html-keyboard-response,207,337808,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+208,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,208,339315,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+209,,sound/500,,audio-keyboard-response,209,341823,19,1,None,acquisition,anything,neutral,2.0,700.0,300.0,p,500.0,,,,,,,False,False,no_key
+210,,"<font size=""100%""></font>",,html-keyboard-response,210,342932,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+211,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,211,344443,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+212,,sound/300,,audio-keyboard-response,212,346972,19,1,None,acquisition,p,positive,2.0,700.0,300.0,p,300.0,,,,,,,False,False,no_key
+213,,"<font size=""100%"" weight=bold> + $0.00 </font>",,html-keyboard-response,213,348081,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+214,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,214,349591,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+215,148.0,sound/700,,audio-keyboard-response,215,349737,19,1,80.0,acquisition,q,negative,2.0,700.0,300.0,p,700.0,,,,,,,False,False,positive
+216,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,216,350845,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+217,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,217,352353,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+218,450.0,sound/300,,audio-keyboard-response,218,352797,19,1,80.0,acquisition,p,positive,2.0,700.0,300.0,p,300.0,,,,,,,False,False,positive
+219,,"<font size=""100%"" weight=bold> + $0.00 </font>",,html-keyboard-response,219,353905,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+220,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,220,355412,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+221,,sound/500,,audio-keyboard-response,221,357922,19,1,None,acquisition,anything,neutral,2.0,700.0,300.0,p,500.0,,,,,,,False,False,no_key
+222,,"<font size=""100%""></font>",,html-keyboard-response,222,359031,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+223,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,223,360539,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+224,604.0,sound/300,,audio-keyboard-response,224,361139,19,1,80.0,acquisition,p,positive,2.0,700.0,300.0,p,300.0,,,,,,,False,False,positive
+225,,"<font size=""100%"" weight=bold> + $0.00 </font>",,html-keyboard-response,225,362248,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+226,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,226,363757,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+227,731.0,sound/500,,audio-keyboard-response,227,364492,19,1,80.0,acquisition,anything,neutral,2.0,700.0,300.0,p,500.0,,,,,,,False,False,positive
+228,,"<font size=""100%""></font>",,html-keyboard-response,228,365601,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+229,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,229,367109,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+230,,sound/700,,audio-keyboard-response,230,369618,19,1,None,acquisition,q,negative,2.0,700.0,300.0,p,700.0,,,,,,,False,False,no_key
+231,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,231,370726,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+232,1315.0,The total bonus amount of bonus you earned in this last period was $0.00.<br> Press any key to continue to the next step.,,html-keyboard-response,232,372552,19,1,80.0,,,,,,,,,,,,,,,True,True,positive
+233,4766.0,,,instructions,233,377325,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+234,,,,html-keyboard-response,234,378234,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+235,682.0,sound/200,,audio-keyboard-response,235,378911,19,1,81.0,generalization,space,positive,2.0,700.0,300.0,p,,False,200.0,-100.0,30.0,False,,False,False,negative
+236,,,,html-keyboard-response,236,379919,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+237,,,,html-keyboard-response,237,380436,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+238,810.0,sound/480,,audio-keyboard-response,238,381242,19,1,81.0,generalization,space,control,2.0,700.0,300.0,p,,False,,,31.0,,,False,False,negative
+239,,,,html-keyboard-response,239,382249,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+240,,,,html-keyboard-response,240,382757,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+241,517.0,sound/900,,audio-keyboard-response,241,383274,19,1,80.0,generalization,space,control,2.0,700.0,300.0,p,,False,,,32.0,,,False,False,positive
+242,,,,html-keyboard-response,242,384283,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+243,,,,html-keyboard-response,243,384791,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+244,589.0,sound/640,,audio-keyboard-response,244,385382,19,1,80.0,generalization,space,negative,2.0,700.0,300.0,p,,False,640.0,-60.0,33.0,False,,False,False,positive
+245,,,,html-keyboard-response,245,386389,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+246,,,,html-keyboard-response,246,386897,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+247,418.0,sound/300,,audio-keyboard-response,247,387319,19,1,80.0,generalization,p,positive,2.0,700.0,300.0,p,,True,,0.0,34.0,True,,False,False,positive
+248,,,,html-keyboard-response,248,388327,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+249,,,,html-keyboard-response,249,388838,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+250,342.0,sound/700,,audio-keyboard-response,250,389179,19,1,81.0,generalization,q,negative,2.0,700.0,300.0,p,,True,,0.0,35.0,True,,False,False,negative
+251,,,,html-keyboard-response,251,390188,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+252,,,,html-keyboard-response,252,390696,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+253,406.0,sound/705,,audio-keyboard-response,253,391097,19,1,81.0,generalization,space,negative,2.0,700.0,300.0,p,,False,705.0,5.0,36.0,True,,False,False,negative
+254,,,,html-keyboard-response,254,392105,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+255,,,,html-keyboard-response,255,392613,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+256,369.0,sound/360,,audio-keyboard-response,256,392969,19,1,80.0,generalization,space,positive,2.0,700.0,300.0,p,,False,360.0,60.0,37.0,True,,False,False,positive
+257,,,,html-keyboard-response,257,393977,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+258,,,,html-keyboard-response,258,394485,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+259,389.0,sound/280,,audio-keyboard-response,259,394874,19,1,80.0,generalization,space,positive,2.0,700.0,300.0,p,,False,280.0,-20.0,38.0,True,,False,False,positive
+260,,,,html-keyboard-response,260,395882,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+261,,,,html-keyboard-response,261,396390,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+262,322.0,sound/700,,audio-keyboard-response,262,396722,19,1,80.0,generalization,q,negative,2.0,700.0,300.0,p,,False,,0.0,39.0,False,,False,False,positive
+263,,,,html-keyboard-response,263,397730,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+264,,,,html-keyboard-response,264,398238,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+265,366.0,sound/700,,audio-keyboard-response,265,398607,19,1,80.0,generalization,q,negative,2.0,700.0,300.0,p,,False,,0.0,40.0,False,,False,False,positive
+266,,,,html-keyboard-response,266,399616,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+267,,,,html-keyboard-response,267,400126,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+268,340.0,sound/880,,audio-keyboard-response,268,400469,19,1,80.0,generalization,space,control,2.0,700.0,300.0,p,,False,,,41.0,,,False,False,positive
+269,,,,html-keyboard-response,269,401476,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+270,,,,html-keyboard-response,270,401986,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+271,342.0,sound/305,,audio-keyboard-response,271,402325,19,1,80.0,generalization,space,positive,2.0,700.0,300.0,p,,False,305.0,5.0,42.0,True,,False,False,positive
+272,,,,html-keyboard-response,272,403362,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+273,,,,html-keyboard-response,273,403870,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+274,580.0,sound/320,,audio-keyboard-response,274,404450,19,1,81.0,generalization,space,positive,2.0,700.0,300.0,p,,False,320.0,20.0,43.0,False,,False,False,negative
+275,,,,html-keyboard-response,275,405458,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+276,,,,html-keyboard-response,276,405966,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+277,322.0,sound/700,,audio-keyboard-response,277,406288,19,1,81.0,generalization,q,negative,2.0,700.0,300.0,p,,True,,0.0,44.0,True,,False,False,negative
+278,,,,html-keyboard-response,278,407297,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+279,,,,html-keyboard-response,279,407805,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+280,406.0,sound/800,,audio-keyboard-response,280,408210,19,1,81.0,generalization,space,negative,2.0,700.0,300.0,p,,False,800.0,100.0,45.0,True,,False,False,negative
+281,,,,html-keyboard-response,281,409220,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+282,,,,html-keyboard-response,282,409725,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+283,372.0,sound/300,,audio-keyboard-response,283,410096,19,1,80.0,generalization,p,positive,2.0,700.0,300.0,p,,True,,0.0,46.0,True,,False,False,positive
+284,,,,html-keyboard-response,284,411100,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+285,,,,html-keyboard-response,285,411610,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+286,392.0,sound/295,,audio-keyboard-response,286,412006,19,1,81.0,generalization,space,positive,2.0,700.0,300.0,p,,False,295.0,-5.0,47.0,False,,False,False,negative
+287,,,,html-keyboard-response,287,413014,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+288,,,,html-keyboard-response,288,413525,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+289,311.0,sound/600,,audio-keyboard-response,289,413828,19,1,80.0,generalization,space,negative,2.0,700.0,300.0,p,,False,600.0,-100.0,48.0,False,,False,False,positive
+290,,,,html-keyboard-response,290,414836,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+291,,,,html-keyboard-response,291,415344,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+292,328.0,sound/500,,audio-keyboard-response,292,415664,19,1,81.0,generalization,space,control,2.0,700.0,300.0,p,,False,,,49.0,,,False,False,negative
+293,,,,html-keyboard-response,293,416674,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+294,,,,html-keyboard-response,294,417181,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+295,223.0,sound/695,,audio-keyboard-response,295,417406,19,1,80.0,generalization,space,negative,2.0,700.0,300.0,p,,False,695.0,-5.0,50.0,False,,False,False,positive
+296,,,,html-keyboard-response,296,418411,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+297,,,,html-keyboard-response,297,418920,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+298,23.0,sound/760,,audio-keyboard-response,298,418937,19,1,81.0,generalization,space,negative,2.0,700.0,300.0,p,,False,760.0,60.0,51.0,True,,False,False,negative
+299,,,,html-keyboard-response,299,419945,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+300,,,,html-keyboard-response,300,420454,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+301,,sound/720,,audio-keyboard-response,301,422964,19,1,None,generalization,space,negative,2.0,700.0,300.0,p,,False,720.0,20.0,52.0,,,False,False,no_key
+302,,<p style='font-weight:bold; color: red; font-size=100%'> - $0.40<br>RESPOND FASTER!</p>,,html-keyboard-response,302,423973,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+303,,,,html-keyboard-response,303,424501,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+304,406.0,sound/240,,audio-keyboard-response,304,424900,19,1,81.0,generalization,space,positive,2.0,700.0,300.0,p,,False,240.0,-60.0,53.0,False,,False,False,negative
+305,,,,html-keyboard-response,305,425910,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+306,,,,html-keyboard-response,306,426419,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+307,325.0,sound/400,,audio-keyboard-response,307,426749,19,1,80.0,generalization,space,positive,2.0,700.0,300.0,p,,False,400.0,100.0,54.0,True,,False,False,positive
+308,,,,html-keyboard-response,308,427757,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+309,,,,html-keyboard-response,309,428267,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+310,122.0,sound/300,,audio-keyboard-response,310,428386,19,1,81.0,generalization,p,positive,2.0,700.0,300.0,p,,False,,0.0,55.0,False,,False,False,negative
+311,,,,html-keyboard-response,311,429395,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+312,,,,html-keyboard-response,312,429905,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+313,290.0,sound/920,,audio-keyboard-response,313,430200,19,1,80.0,generalization,space,control,2.0,700.0,300.0,p,,False,,,56.0,,,False,False,positive
+314,,,,html-keyboard-response,314,431208,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+315,,,,html-keyboard-response,315,431717,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+316,282.0,sound/520,,audio-keyboard-response,316,431997,19,1,81.0,generalization,space,control,2.0,700.0,300.0,p,,False,,,57.0,,,False,False,negative
+317,,,,html-keyboard-response,317,433006,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+318,,,,html-keyboard-response,318,433515,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+319,273.0,sound/300,,audio-keyboard-response,319,433792,19,1,80.0,generalization,p,positive,2.0,700.0,300.0,p,,True,,0.0,58.0,True,,False,False,positive
+320,,,,html-keyboard-response,320,434801,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+321,,,,html-keyboard-response,321,435308,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+322,273.0,sound/680,,audio-keyboard-response,322,435578,19,1,81.0,generalization,space,negative,2.0,700.0,300.0,p,,False,680.0,-20.0,59.0,True,,False,False,negative
+323,,,,html-keyboard-response,323,436586,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+324,1473.0,bonus earned during this period: $0.20<br><br>Press any key to continue.,,html-keyboard-response,324,438068,19,1,32.0,,,,,,,,,,,,,,,True,True,neutral
+325,2191.0,,,instructions,325,440267,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+326,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,326,441691,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+327,,sound/700,,audio-keyboard-response,327,444201,19,1,None,acquisition,q,negative,3.0,700.0,300.0,p,700.0,,,,,,,False,False,no_key
+328,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,328,445314,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+329,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,329,446826,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+330,522.0,sound/700,,audio-keyboard-response,330,447352,19,1,81.0,acquisition,q,negative,3.0,700.0,300.0,p,700.0,,,,,,,False,False,negative
+331,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,331,448460,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+332,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,332,449970,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+333,319.0,sound/500,,audio-keyboard-response,333,450291,19,1,81.0,acquisition,anything,neutral,3.0,700.0,300.0,p,500.0,,,,,,,False,False,negative
+334,,"<font size=""100%""></font>",,html-keyboard-response,334,451401,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+335,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,335,452910,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+336,496.0,sound/700,,audio-keyboard-response,336,455422,19,1,81.0,acquisition,anything,negative,3.0,700.0,300.0,p,700.0,False,,,,,,False,False,negative
+337,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,337,456530,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+338,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,338,458043,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+339,,sound/500,,audio-keyboard-response,339,460555,19,1,None,acquisition,anything,neutral,3.0,700.0,300.0,p,500.0,,,,,,,False,False,no_key
+340,,"<font size=""100%""></font>",,html-keyboard-response,340,461664,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+341,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,341,463176,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+342,662.0,sound/300,,audio-keyboard-response,342,463843,19,1,80.0,acquisition,p,positive,3.0,700.0,300.0,p,300.0,,,,,,,False,False,positive
+343,,"<font size=""100%"" weight=bold> + $0.00 </font>",,html-keyboard-response,343,464952,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+344,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,344,466463,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+345,726.0,sound/500,,audio-keyboard-response,345,467193,19,1,81.0,acquisition,anything,neutral,3.0,700.0,300.0,p,500.0,,,,,,,False,False,negative
+346,,"<font size=""100%""></font>",,html-keyboard-response,346,468301,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+347,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,347,469812,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+348,,sound/300,,audio-keyboard-response,348,472325,19,1,None,acquisition,anything,positive,3.0,700.0,300.0,p,300.0,True,,,,,,False,False,no_key
+349,,"<font size=""100%"" weight=bold> + $0.04</font>",,html-keyboard-response,349,473437,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+350,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,350,474947,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+351,554.0,sound/300,,audio-keyboard-response,351,475506,19,1,80.0,acquisition,p,positive,3.0,700.0,300.0,p,300.0,,,,,,,False,False,positive
+352,,"<font size=""100%"" weight=bold> + $0.00 </font>",,html-keyboard-response,352,476684,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+353,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,353,478193,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+354,662.0,sound/700,,audio-keyboard-response,354,478867,19,1,81.0,acquisition,q,negative,3.0,700.0,300.0,p,700.0,,,,,,,False,False,negative
+355,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,355,479976,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+356,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,356,481507,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+357,787.0,sound/300,,audio-keyboard-response,357,482286,19,1,80.0,acquisition,p,positive,3.0,700.0,300.0,p,300.0,,,,,,,False,False,positive
+358,,"<font size=""100%"" weight=bold> + $0.00 </font>",,html-keyboard-response,358,483398,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+359,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,359,484910,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+360,749.0,sound/300,,audio-keyboard-response,360,485661,19,1,80.0,acquisition,p,positive,3.0,700.0,300.0,p,300.0,,,,,,,False,False,positive
+361,,"<font size=""100%"" weight=bold> + $0.00 </font>",,html-keyboard-response,361,486773,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+362,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,362,488285,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+363,557.0,sound/500,,audio-keyboard-response,363,488847,19,1,81.0,acquisition,anything,neutral,3.0,700.0,300.0,p,500.0,,,,,,,False,False,negative
+364,,"<font size=""100%""></font>",,html-keyboard-response,364,489956,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+365,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,365,491510,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+366,865.0,sound/300,,audio-keyboard-response,366,492377,19,1,80.0,acquisition,p,positive,3.0,700.0,300.0,p,300.0,,,,,,,False,False,positive
+367,,"<font size=""100%"" weight=bold> + $0.00 </font>",,html-keyboard-response,367,493488,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+368,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,368,494999,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+369,868.0,sound/700,,audio-keyboard-response,369,495870,19,1,81.0,acquisition,q,negative,3.0,700.0,300.0,p,700.0,,,,,,,False,False,negative
+370,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,370,496979,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+371,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,371,498492,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+372,700.0,sound/300,,audio-keyboard-response,372,501001,19,1,80.0,acquisition,anything,positive,3.0,700.0,300.0,p,300.0,True,,,,,,False,False,positive
+373,,"<font size=""100%"" weight=bold> + $0.04</font>",,html-keyboard-response,373,502112,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+374,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,374,503622,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+375,720.0,sound/700,,audio-keyboard-response,375,504329,19,1,81.0,acquisition,q,negative,3.0,700.0,300.0,p,700.0,,,,,,,False,False,negative
+376,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,376,505439,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+377,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,377,507005,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+378,752.0,sound/500,,audio-keyboard-response,378,507761,19,1,80.0,acquisition,anything,neutral,3.0,700.0,300.0,p,500.0,,,,,,,False,False,positive
+379,,"<font size=""100%""></font>",,html-keyboard-response,379,508872,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+380,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,380,510385,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+381,,sound/700,,audio-keyboard-response,381,512897,19,1,None,acquisition,anything,negative,3.0,700.0,300.0,p,700.0,False,,,,,,False,False,no_key
+382,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,382,514008,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+383,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,383,515519,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+384,1033.0,sound/500,,audio-keyboard-response,384,516549,19,1,81.0,acquisition,anything,neutral,3.0,700.0,300.0,p,500.0,,,,,,,False,False,negative
+385,,"<font size=""100%""></font>",,html-keyboard-response,385,517658,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+386,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,386,519172,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+387,1144.0,sound/700,,audio-keyboard-response,387,520311,19,1,80.0,acquisition,q,negative,3.0,700.0,300.0,p,700.0,,,,,,,False,False,positive
+388,,"<font size=""100%"" weight=bold> - $0.04</font>",,html-keyboard-response,388,521422,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+389,,"<div style=""font-size:120%; top:20%""></div>",,html-keyboard-response,389,522935,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+390,1129.0,sound/300,,audio-keyboard-response,390,524059,19,1,81.0,acquisition,p,positive,3.0,700.0,300.0,p,300.0,,,,,,,False,False,negative
+391,,"<font size=""100%"" weight=bold> + $0.00 </font>",,html-keyboard-response,391,525171,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+392,1794.0,The total bonus amount of bonus you earned in this last period was $0.00.<br> Press any key to continue to the next step.,,html-keyboard-response,392,527480,19,1,32.0,,,,,,,,,,,,,,,True,True,neutral
+393,4439.0,,,instructions,393,531928,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+394,,,,html-keyboard-response,394,532838,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+395,990.0,sound/300,,audio-keyboard-response,395,533827,19,1,81.0,generalization,p,positive,3.0,700.0,300.0,p,,False,,0.0,60.0,False,,False,False,negative
+396,,,,html-keyboard-response,396,534837,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+397,,,,html-keyboard-response,397,535347,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+398,49.0,sound/300,,audio-keyboard-response,398,535395,19,1,80.0,generalization,p,positive,3.0,700.0,300.0,p,,True,,0.0,61.0,True,,False,False,positive
+399,,,,html-keyboard-response,399,536406,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+400,,,,html-keyboard-response,400,536917,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+401,676.0,sound/640,,audio-keyboard-response,401,537601,19,1,80.0,generalization,space,negative,3.0,700.0,300.0,p,,False,640.0,-60.0,62.0,False,,False,False,positive
+402,,,,html-keyboard-response,402,538611,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+403,,,,html-keyboard-response,403,539123,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+404,148.0,sound/200,,audio-keyboard-response,404,539270,19,1,80.0,generalization,space,positive,3.0,700.0,300.0,p,,False,200.0,-100.0,63.0,True,,False,False,positive
+405,,,,html-keyboard-response,405,540282,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+406,,,,html-keyboard-response,406,540791,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+407,964.0,sound/400,,audio-keyboard-response,407,541752,19,1,80.0,generalization,space,positive,3.0,700.0,300.0,p,,False,400.0,100.0,64.0,True,,False,False,positive
+408,,,,html-keyboard-response,408,542763,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+409,,,,html-keyboard-response,409,543274,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+410,653.0,sound/295,,audio-keyboard-response,410,543925,19,1,80.0,generalization,space,positive,3.0,700.0,300.0,p,,False,295.0,-5.0,65.0,True,,False,False,positive
+411,,,,html-keyboard-response,411,544935,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+412,,,,html-keyboard-response,412,545444,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+413,380.0,sound/480,,audio-keyboard-response,413,545819,19,1,32.0,generalization,space,control,3.0,700.0,300.0,p,,True,,,66.0,,,False,False,neutral
+414,,,,html-keyboard-response,414,546833,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+415,,,,html-keyboard-response,415,547344,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+416,911.0,sound/760,,audio-keyboard-response,416,548259,19,1,32.0,generalization,space,negative,3.0,700.0,300.0,p,,True,760.0,60.0,67.0,False,,False,False,neutral
+417,,,,html-keyboard-response,417,549268,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+418,,,,html-keyboard-response,418,549777,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+419,67.0,sound/280,,audio-keyboard-response,419,549842,19,1,32.0,generalization,space,positive,3.0,700.0,300.0,p,,True,280.0,-20.0,68.0,False,,False,False,neutral
+420,,,,html-keyboard-response,420,550854,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+421,,,,html-keyboard-response,421,551365,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+422,41.0,sound/700,,audio-keyboard-response,422,551404,19,1,32.0,generalization,q,negative,3.0,700.0,300.0,p,,False,,0.0,69.0,False,,False,False,neutral
+423,,,,html-keyboard-response,423,552416,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+424,,,,html-keyboard-response,424,552929,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+425,58.0,sound/880,,audio-keyboard-response,425,552983,19,1,32.0,generalization,space,control,3.0,700.0,300.0,p,,True,,,70.0,,,False,False,neutral
+426,,,,html-keyboard-response,426,554092,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+427,,,,html-keyboard-response,427,554601,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+428,789.0,sound/920,,audio-keyboard-response,428,555385,19,1,32.0,generalization,space,control,3.0,700.0,300.0,p,,True,,,71.0,,,False,False,neutral
+429,,,,html-keyboard-response,429,556399,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+430,,,,html-keyboard-response,430,556910,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+431,78.0,sound/700,,audio-keyboard-response,431,556979,19,1,32.0,generalization,q,negative,3.0,700.0,300.0,p,,False,,0.0,72.0,False,,False,False,neutral
+432,,,,html-keyboard-response,432,557997,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+433,,,,html-keyboard-response,433,558509,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+434,20.0,sound/305,,audio-keyboard-response,434,558534,19,1,32.0,generalization,space,positive,3.0,700.0,300.0,p,,True,305.0,5.0,73.0,False,,False,False,neutral
+435,,,,html-keyboard-response,435,559545,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+436,,,,html-keyboard-response,436,560058,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+437,781.0,sound/520,,audio-keyboard-response,437,560840,19,1,32.0,generalization,space,control,3.0,700.0,300.0,p,,True,,,74.0,,,False,False,neutral
+438,,,,html-keyboard-response,438,561849,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+439,,,,html-keyboard-response,439,562360,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+440,598.0,sound/705,,audio-keyboard-response,440,562965,19,1,32.0,generalization,space,negative,3.0,700.0,300.0,p,,True,705.0,5.0,75.0,False,,False,False,neutral
+441,,,,html-keyboard-response,441,563976,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+442,,,,html-keyboard-response,442,564490,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+443,322.0,sound/240,,audio-keyboard-response,443,564812,19,1,32.0,generalization,space,positive,3.0,700.0,300.0,p,,True,240.0,-60.0,76.0,False,,False,False,neutral
+444,,,,html-keyboard-response,444,565823,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+445,,,,html-keyboard-response,445,566333,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+446,29.0,sound/800,,audio-keyboard-response,446,566355,19,1,32.0,generalization,space,negative,3.0,700.0,300.0,p,,True,800.0,100.0,77.0,False,,False,False,neutral
+447,,,,html-keyboard-response,447,567365,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+448,,,,html-keyboard-response,448,567875,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+449,894.0,sound/720,,audio-keyboard-response,449,568763,19,1,32.0,generalization,space,negative,3.0,700.0,300.0,p,,True,720.0,20.0,78.0,False,,False,False,neutral
+450,,,,html-keyboard-response,450,569884,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+451,,,,html-keyboard-response,451,570396,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+452,798.0,sound/680,,audio-keyboard-response,452,571203,19,1,32.0,generalization,space,negative,3.0,700.0,300.0,p,,True,680.0,-20.0,79.0,False,,False,False,neutral
+453,,,,html-keyboard-response,453,572211,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+454,,,,html-keyboard-response,454,572727,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+455,554.0,sound/500,,audio-keyboard-response,455,573289,19,1,32.0,generalization,space,control,3.0,700.0,300.0,p,,True,,,80.0,,,False,False,neutral
+456,,,,html-keyboard-response,456,574301,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+457,,,,html-keyboard-response,457,574814,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+458,223.0,sound/600,,audio-keyboard-response,458,575039,19,1,32.0,generalization,space,negative,3.0,700.0,300.0,p,,True,600.0,-100.0,81.0,False,,False,False,neutral
+459,,,,html-keyboard-response,459,576049,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+460,,,,html-keyboard-response,460,576558,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+461,58.0,sound/300,,audio-keyboard-response,461,576615,19,1,32.0,generalization,p,positive,3.0,700.0,300.0,p,,False,,0.0,82.0,False,,False,False,neutral
+462,,,,html-keyboard-response,462,577626,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+463,,,,html-keyboard-response,463,578135,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+464,78.0,sound/900,,audio-keyboard-response,464,578210,19,1,32.0,generalization,space,control,3.0,700.0,300.0,p,,True,,,83.0,,,False,False,neutral
+465,,,,html-keyboard-response,465,579223,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+466,,,,html-keyboard-response,466,579731,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+467,729.0,sound/700,,audio-keyboard-response,467,580455,19,1,32.0,generalization,q,negative,3.0,700.0,300.0,p,,False,,0.0,84.0,False,,False,False,neutral
+468,,,,html-keyboard-response,468,581466,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+469,,,,html-keyboard-response,469,581978,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+470,505.0,sound/695,,audio-keyboard-response,470,582483,19,1,32.0,generalization,space,negative,3.0,700.0,300.0,p,,True,695.0,-5.0,85.0,False,,False,False,neutral
+471,,,,html-keyboard-response,471,583493,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+472,,,,html-keyboard-response,472,584003,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+473,401.0,sound/700,,audio-keyboard-response,473,584408,19,1,32.0,generalization,q,negative,3.0,700.0,300.0,p,,False,,0.0,86.0,False,,False,False,neutral
+474,,,,html-keyboard-response,474,585417,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+475,,,,html-keyboard-response,475,585926,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+476,467.0,sound/300,,audio-keyboard-response,476,586394,19,1,32.0,generalization,p,positive,3.0,700.0,300.0,p,,False,,0.0,87.0,False,,False,False,neutral
+477,,,,html-keyboard-response,477,587406,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+478,,,,html-keyboard-response,478,587933,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+479,380.0,sound/320,,audio-keyboard-response,479,588315,19,1,32.0,generalization,space,positive,3.0,700.0,300.0,p,,True,320.0,20.0,88.0,False,,False,False,neutral
+480,,,,html-keyboard-response,480,589323,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+481,,,,html-keyboard-response,481,589829,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+482,418.0,sound/360,,audio-keyboard-response,482,590249,19,1,32.0,generalization,space,positive,3.0,700.0,300.0,p,,True,360.0,60.0,89.0,False,,False,False,neutral
+483,,,,html-keyboard-response,483,591261,19,1,None,,,,,,,,,,,,,,,True,True,no_key
+484,1022.0,bonus earned during this period: $0.76<br><br>Press any key to continue.,,html-keyboard-response,484,592291,19,1,32.0,,,,,,,,,,,,,,,True,True,neutral
+485,2897.0,,,survey-text,485,595203,19,1,None,,,,,,,,,,,,,,"{""Q0"":""""}",True,True,no_key
 0,6416.0,"<p>Before we begin this experiment, please make sure your sound is on and un-muted. When you are ready, press the button below!</p>",0.0,html-button-response,0,6417,3,1,None,,,,,,,,,,,,,,,True,True,no_key
 1,23289.0,,,instructions,1,29708,3,1,None,,,,,,,,,,,,,,,True,True,no_key
 2,1356.0,sound/500,0.0,audio-button-response,2,32073,3,1,None,,,,,,,,,,,,,,,True,True,no_key

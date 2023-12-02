@@ -10,7 +10,7 @@ def extract_data_pB():
     path = os.path.abspath("data")
     sys.path.append(path)
     
-    subjectfiles = ["/pilotB_testing/pilot-b-251-rescue_17.csv"]
+    subjectfiles = ["/pilotB_testing/pilot-b-251-rescue_17.csv","/pilotB_testing/pilot-b-251-rescue_19.csv","/pilotB_testing/pilot-b-251-rescue_3test.csv"]
     
     # concatenate all subjects data
     subject_trial_data = pd.DataFrame()
