@@ -19,6 +19,7 @@
 </head>
   
 <script> 
+
 // FUNCTIONS TO PLAY TONES ON INSTRUCTION SLIDE
 function play_low() {document.getElementById("low_audio").play();} 
 function play_high() { document.getElementById("high_audio").play(); } 
@@ -42,14 +43,22 @@ var valence_types = ['positive', 'negative']
 var generalization_data = { stage: 'generalization', correct_response: 'space', valence: ''}
 
 /* COUNTERBALANCE TONE-VALENCE */
-var tone_balance = 1*(Math.random()>0.5);
+var tone_balance = Math.round(Math.random());
+var tone_neg = 1 - tone_balance
+if (tone_neg < 0) {
+  tone_neg = 1
+}
 var two_tones = [300, 700] 
-var valence_tones = [two_tones[tone_balance], two_tones[1*(!tone_balance)]]
+var valence_tones = [two_tones[tone_balance], two_tones[tone_neg]]
 
 /* COUNTERBALANCE VALENCE KEY PRESS */
-var key_balance = 1*(Math.random()>0.5);
+var key_balance = Math.round(Math.random())
+var key_neg = 1 - key_balance
+if (key_neg < 0) {
+  key_neg = 1
+}
 var two_keys = ['p', 'q'] 
-var response_keys = [two_keys[key_balance], two_keys[1*(!key_balance)]] 
+var response_keys = [two_keys[key_balance], two_keys[key_neg]] 
 /* SET VALENCE-TONE-KEY MAPPING */
 var valence_key_map = {[valence_types[0]]:{'key':response_keys[0], 'tone': valence_tones[0]}, 
                        [valence_types[1]]: {'key':response_keys[1], 'tone':valence_tones[1]}}
@@ -63,7 +72,7 @@ var generalization_stimuli = []
 var neutral_tones = [500] 
 var acquisition_trial_duration = 2500    
 
-let instrumental_prompt = "<div style='font-size:120%; bottom: 10px; font-weight:bold'>If you hear the positive or negative tone, press the key associated with it. <strong>" + positive_key_str + "</strong> should be pressed for the positive tone, and <strong>" + negative_key_str + "</strong> should be pressed for the negative tone. <br><br> If you hear the neutral tone, you don't have to press anything.</div>"
+let instrumental_prompt = "<div style='font-size:120%; bottom: 10px; font-weight:bold'>If you hear the positive or negative tone, press the key associated with it. <strong>" + positive_key_str + "</strong> should be pressed for the positive tone, and <strong>" + negative_key_str + "</strong> should be pressed for the negative tone. <br><br> If you hear the neutral tone, please press the spacebar, although you will not be rewarded or lose points.</div>"
 var helpless_prompt = "<div style='font-size:120%; bottom: 10px; font-weight:bold'>helpless</div>" 
 var generalization_prompt = "<div style='font-size:120%; bottom: 10px; font-weight:bold'>If you hear the positive or negative tone, press the key associated with it (either 'p' or 'q')<br><br>Otherwise press the space bar.</div>" 
 
@@ -75,7 +84,7 @@ for (i_valence=0;i_valence<valence_tones.length;i_valence++){
                                     data:{ stage:'generalization', 
                                            correct_response:response_keys[i_valence], 
                                            valence: valence_types[i_valence], 
-                                           condition: "valence_tones",
+                                           condition: 'valence_tones',
                                            distance:0}, 
                                     prompt: generalization_prompt, 
       })
@@ -88,7 +97,7 @@ for (i_valence=0;i_valence<valence_tones.length;i_valence++){
                                           correct_response:'space',
                                           tone: (valence_tones[i_valence] + surround[i_gen]), 
                                           valence:valence_types[i_valence], 
-                                          condition:"surround",
+                                          condition:'surround',
                                           distance: surround[i_gen]},  
                                   prompt: generalization_prompt, 
                                   
@@ -102,8 +111,8 @@ for (i_valence=0;i_valence<valence_tones.length;i_valence++){
                                  data: { stage:'generalization', 
                                  correct_response:'space', 
                                  valence:'control', 
-                                 condition: "random",
-                                 distance:NaN}, 
+                                 condition: 'random',
+                                 distance:NaN,}, 
                                 prompt: generalization_prompt
    })
  }
@@ -114,7 +123,9 @@ var positive_instrumental = {
   data: { stage: 'acquisition', 
           correct_response: valence_key_map['positive']['key'], 
           valence: 'positive', 
-          condition: "instrumental"}
+          condition: 'instrumental',
+          correct: NaN,
+  }
 };
 var negative_instrumental = {
   stimulus: stimulus_folder + valence_tones[1], 
@@ -122,7 +133,9 @@ var negative_instrumental = {
   data: { stage: 'acquisition', 
           correct_response: valence_key_map['negative']['key'], 
           valence: 'negative', 
-          condition: "instrumental"}
+          condition: 'instrumental',
+          correct: NaN,
+  }
 };
 var neutral_instrumental = {
   stimulus: stimulus_folder + neutral_tones[0], 
@@ -130,7 +143,7 @@ var neutral_instrumental = {
   data: { stage: 'acquisition', 
           correct_response: 'anything', 
           valence: 'neutral', 
-          condition: "instrumental" }
+          condition: 'instrumental',}
 };
 var positive_pavlovian = {
   stimulus: stimulus_folder + valence_tones[0], 
@@ -138,8 +151,8 @@ var positive_pavlovian = {
   data: { stage: 'acquisition', 
           correct_response: 'anything', 
           valence: 'positive', 
-          condition: "pavlovian", 
-          correct: true} 
+          condition: 'pavlovian', 
+          correct: true,} 
 };
 var negative_pavlovian = {
   stimulus: stimulus_folder + valence_tones[1], 
@@ -147,9 +160,9 @@ var negative_pavlovian = {
   data: { stage: 'acquisition', 
           correct_response: 'anything', 
           valence: 'negative', 
-          condition: "pavlovian", 
-          correct: false}
-}
+          condition: 'pavlovian', 
+          correct: false,}
+};
 
 
 /* GENERATE DATA FOR THE ACQUISITION STAGE */
@@ -161,7 +174,7 @@ var acquisition_stimuli = [
   /* 27% -- should be 33% */
   neutral_instrumental, neutral_instrumental, neutral_instrumental,  
   /*  9% -- should be 10% */
-  positive_pavlovian, negative_pavlovian 
+  positive_pavlovian, negative_pavlovian,
 ];
 
 /* GENERATE AUDIO FILE FOR PRELOADING */
@@ -171,6 +184,20 @@ for (i=0;i<generalization_stimuli.length;i++)
 for (i=0;i<acquisition_stimuli.length;i++)
   { audio.push(acquisition_stimuli[i]['stimulus'])}
 
+var consent_form = {
+  type:  "instructions", // "html-button-response",
+  pages:[
+  "<div style='width:70%;transform:translateX(20%)'> " +
+    "<p style='font-size:150%'>Statement of consent</p>" + 
+      "<p>By answering the following questions, you are participating in a study being performed by cognitive scientists in the Stanford Department of Psychology. If you have questions about this research, please contact us at stanfordpsych251@gmail.com. You must be at least 18 years old to participate. Your participation in this research is voluntary. You may decline to answer any or all of the following questions. You may decline further participation, at any time, without adverse consequences. Your anonymity is assured; the researchers who have requested your participation will not receive any personal information about you.</p>" 
+    ], 
+    
+  show_clickable_nav: true,
+  show_page_number: true, 
+  post_trial_gap: 1000, 
+  choices: ["<p style='margin: 10px'>I'm ready to start!</p>"],
+};
+
 var unmute_instructions = {
   type: 'html-button-response',
   stimulus: '<p>Before we begin this experiment, please make sure your sound is on and un-muted. When you are ready, press the button below!</p>',
@@ -179,7 +206,6 @@ var unmute_instructions = {
 
 var instructions = {
   type:  "instructions", // "html-button-response",
-  // read slide structure from HTML element
   pages:[
   "<div style='width:70%;transform:translateX(20%)'>"+
   "<p style='font-size:200%; font-weight:bold'>Welcome to our experiment!</p>" + 
@@ -194,7 +220,7 @@ var instructions = {
       "When you hear this sound, you'll have a small amount added to your bonus when you press the correct key; if you press the incorrect key you'll gain nothing.<p> " + 
       "<p><b>2) A Negative sound</b>: This is the only sound you'll lose money from. " + 
       "When you hear this sound, you'll have a small amount removed from your bonus if you press the incorrect key; if you press the correct key, you'll lose nothing.<p>" + 
-      "<p><b>3) A Neutral sound</b>: You don't need to respond to this tone, and you won't gain or lose money when you hear it.</p></div>",  
+      "<p><b>3) A Neutral sound</b>: Press the spacebar if you hear it, but you won't gain or lose money when you hear it.</p></div>",  
     "<p style='font-size:120%'>You'll have to learn which are the positive and negative sounds, and select the correct key for each of them.</p>" + 
     "<div style='width:70%;transform:translateX(20%)'><p>" +  
       "<p style='font-size:160%; '>When you hear a sound, you can respond by pressing either '<b>p</b>' or '<b>q</b>'</p>. You should press '<b>" + 
@@ -205,7 +231,7 @@ var instructions = {
       "<p><b>2) Negative responses</b>: If you press (<strong>" + negative_key_str +"</strong>) you won't lose any bonus. " + 
         "If you press the incorrect key, you'll have $" + bonus_amount + " taken away from your total bonus. You'll receive immediate feedback." + 
       "</p>" + 
-      "<p><b>3) Neutral responses</b>: For the neutral sounds, don't press anything. There will be no feedback for these sounds, just a blank screen." + 
+      "<p><b>3) Neutral responses</b>: For the neutral sounds, press space (although you will not win or lose money based on your answer). There will be no feedback for these sounds, just a blank screen." + 
         "</p></div>",  
      "<div style='width:70%;transform:translateX(20%)'>" +  
     "<p style='font-size:160%'>You'll have two seconds to respond to each sound</p> " + 
@@ -228,6 +254,7 @@ var instructions = {
     "<br>" +
     "</p>" + 
   "</div>",  
+  
   "<div style='width:70%;transform:translateX(20%)'> " +
     "<br><br>" + 
     "We expect this task to take less than 20 minutes. If you perform well, you can earn over $5.00. " + 
@@ -235,9 +262,6 @@ var instructions = {
     "Feel free to read over the instructions again if you're uncertain about anything. " + 
     "If you're ready to begin the experiment, click the button below to proceed."  +
     "<br><br>",
-    "<div style='width:70%;transform:translateX(20%)'> " +
-    "<p style='font-size:150%'>Statement of consent</p>" + 
-      "<p>By engaging in the following experiment, you are participating in a study being performed by cognitive scientists in the Stanford Department of Psychology. If you have questions about this research, please contact us at stanfordpsych251@gmail.com. You must be at least 18 years old to participate. Your participation in this research is voluntary. You may decline to answer any or all of the following questions. You may decline further participation, at any time, without adverse consequences. Your anonymity is assured; the researchers who have requested your participation will not receive any personal information about you. We have recently been made aware that your public Amazon.com profile can be accessed via your worker ID if you do not choose to opt out. If you would like to opt out of this feature, you may follow instructions available <a href='https://www.amazon.com/gp/help/customer/display.html?nodeId=16465241'>here</a></p>" 
     ], 
     
   show_clickable_nav: true,
@@ -257,8 +281,8 @@ var post_audio_test_acquisition_instructions = {
   "<p>" + 
     "<p style='font-size:140%'>Now we're going to begin part one of the experiment.</p>" + 
     "<p>" + 
-      "As a reminder: <br> For the positive sound press '<strong>" + positive_key_str + "</strong> to earn more money, for the negative sound press '<strong>" + negative_key_str + "</strong> to avoid losing money. " + 
-      "For the neutral sounds, you don't have to press anything." + 
+      "As a reminder: <br><br>For the <b>positive sound</b> press '<strong>" + positive_key_str + "</strong> to earn more money, for the <b>negative sound</b>press '<strong>" + negative_key_str + "</strong> to avoid losing money. " + 
+      "For the neutral sounds, press the space (although neutral sounds will not affect your bonus)." + 
     "</p>" + 
     "<p>" + 
       "Remember, the more accurate you are, the more bonus you'll earn! Once the experiment starts it moves forward automatically, so you should only press the button below when you can focus on the task. " + 
@@ -339,11 +363,11 @@ var acquisition_return_instructions = {
     "<p style='font-size:140%'>Now we're going to repeat PART ONE of the experiment.</p>" + 
     "<p>" + 
       "For the positive sound press the correct key to earn more money, for the negative sound press the correct key to avoid losing money. " + 
-      "For the neutral sounds, you don't have to press anything." + 
+      "For the neutral sounds, press the space key although you will not gain or lose any money." + 
     "</p>" + 
     "<p>" + 
-      "The sound and key pairings are all the same. ( " + positive_key_str + " for positive and " + negative_key_str + 
-      " for negative). Remember, the more accurate you are, the more bonus you'll earn! " + 
+      "The sound and key pairings are all the same. <strong>( " + positive_key_str + " for positive and " + negative_key_str + 
+      " for negative) </strong>. Remember, the more accurate you are, the more bonus you'll earn! " + 
     "<p>" + 
   "<div>"],  
   post_trial_gap: 400,
@@ -369,7 +393,6 @@ var generalization_return_instructions = {
   choices: ["Let's go!"]
 };
 
-
 var fixation = {
   type: 'html-keyboard-response',
   choices: jsPsych.NO_KEYS,
@@ -388,6 +411,7 @@ var generalization_reminder = {
   prompt: jsPsych.timelineVariable('prompt'),
 }
 
+/* this is the acquisition process! */
 var train = {
   type: "audio-keyboard-response",
   stimulus: jsPsych.timelineVariable('stimulus'), 
@@ -396,29 +420,48 @@ var train = {
   response_ends_trial: function(data) {
     // end trial early, unless its a pavlovian trial
     trial_condition = jsPsych.data.get().last(1).values()[0]['trial_info']
+    console.log(trial_condition['condition'])
     if (trial_condition['condition'] == 'pavlovian'){
+      console.log("pavlovian")
+      jsPsych.data.addProperties({condition:"pavlovian",worker_feedback:"",total_bonus_amt:""})
       var end_with_response = false
-    } else { var end_with_response = true }
-    return end_with_response }, 
-  
+    } else { 
+      jsPsych.data.addProperties({condition:"instrumental",worker_feedback:"",total_bonus_amt:""})
+      var end_with_response = true 
+    }
+    return end_with_response 
+  }, 
   post_trial_gap: 100, 
   prompt: jsPsych.timelineVariable('prompt'), 
   data: jsPsych.timelineVariable('data'),
   on_finish: function(data){
     // if it's pavlovian, data.correct is already set
-    if (data.condition == "instrumental") {
+    console.log(data.condition)
+    if (data.condition != "pavlovian") {
+      console.log("inside of train, not pavlovian")
       data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);// will be false for neutral
       data.i_acquisition_trial = i_acquisition_trial
       i_acquisition_trial = i_acquisition_trial + 1
     }
+    else {
+      console.log("inside of train, pavlovian")
+      if (data.valence == "positive"){
+        data.correct = true
+        data.condition = "pavlovian"
+      } else {
+        data.correct = false
+        data.condition = "pavlovian"
+      }
+    }
     data.i_block = i_block
     if (data.key_press && data.condition == 'instrumental' && data.valence!='neutral'){
-      data.valence_match = key_map[valence_key_map[data['valence']]['key']] == data.key_press
+      data.valence_match = key_map[valence_key_map[data['valence']]['key']] == data.key_press // is this another way of saying correct ?
     }
     data.negative_tone = valence_key_map["negative"]['tone']
     data_negative_key = valence_key_map["negative"]['key']
     data.positive_tone = valence_key_map["positive"]['tone']
     data.positive_key = valence_key_map["positive"]['key']
+    data.condition = data.condition
     data.frequency = data.stimulus.slice(6, data.stimulus.length)
   },
 }
@@ -450,6 +493,7 @@ var test = {
     data_negative_key = valence_key_map["negative"]['key']
     data.positive_tone = valence_key_map["positive"]['tone']
     data.positive_key = valence_key_map["positive"]['key']
+    data.condition = data.condition
     if (data.key_press && data.valence!='control'){
       data.valence_match = key_map[valence_key_map[data['valence']]['key']] == data.key_press
     }
@@ -466,23 +510,33 @@ var feedback = {
     var last_trial_correct = jsPsych.data.get().last(1).values()[0].correct;
     var stimulus = jsPsych.data.get().last(1).values()[0].stimulus
     var valence = jsPsych.data.get().last(1).values()[0].valence
+    var condition = jsPsych.data.get().last(1).values()[0].condition
     if (valence=='positive') {
+      if (condition=='pavlovian'){
+        last_trial_correct = true
+        console.log("in feedback pavlovian")
+      }
       if (last_trial_correct){  
-        return '<font size="100%" weight=bold> + $' + bonus_amount.toFixed(2) + '</font>';
+        return '<font size="100%" weight=bold> correct! + $' + bonus_amount.toFixed(2) + '</font>';
       } else {
-        return '<font size="100%" weight=bold> + $0.00 </font>'
+        return '<font size="100%" weight=bold> incorrect! + $0.00 </font>'
       }
     } else if (valence=='negative') { 
+      if (condition=='pavlovian'){
+        last_trial_correct = false
+        console.log("in feedback pavlovian")
+      }
       if (last_trial_correct){  
-        return '<font size="100%" weight=bold> - $0.00 </font>';
+        return '<font size="100%" weight=bold> correct! - $0.00 </font>';
       } else {
-        return '<font size="100%" weight=bold> - $' + bonus_amount.toFixed(2) + '</font>'
+        return '<font size="100%" weight=bold> incorrect! - $' + bonus_amount.toFixed(2) + '</font>'
       }
     } else {
-      return '<font size="100%"></font>'
+      return '<font size="100%">neutral! so no change in bonus.</font>'
     }
   }
 }
+
 var generalization_trial_check = {
   type: 'html-keyboard-response',
   choices: jsPsych.NO_KEYS, 
@@ -590,8 +644,12 @@ var experiment_feedback = {
 
   button_label: "Continue to the 'Submit' button for prolific", 
   on_finish:  function() { 
-    worker_feedback = jsPsych.data.get().last(1).values()[0]['responses']
-    data_to_save = {'worker_feedback':worker_feedback, 'total_bonus_earned':total_bonus_amount_for_experiment}
+    data = jsPsych.data.get().last(1)
+    resp = data.values()[0]['responses']
+    jsPsych.data.addProperties({worker_feedback:resp,total_bonus_amt:total_bonus_amount_for_experiment})
+    // data.worker_feedback = data.values()[0]['responses']
+    // data.total_bonus_amt = total_bonus_amount_for_experiment
+    // data_to_save = {'worker_feedback':worker_feedback, 'total_bonus_earned':total_bonus_amount_for_experiment}
   } 
 };
   
@@ -602,6 +660,7 @@ var exit_slide = {
 
 /* CREATE TIMELINE */
 var timeline = [
+                consent_form,
                 unmute_instructions,
                 /* ACQUISITION INSTRUCTIONS*/
                 instructions,
@@ -639,8 +698,9 @@ jsPsych.init({
   use_webaudio: false,
   timeline: timeline,
   on_finish: function() {
-    window.location = "http://www.prolific.com";
+    window.location = "https://app.prolific.com/submissions/complete?cc=CWOZ9ZB5";
   }
 });
+
 </script>
 </html>
