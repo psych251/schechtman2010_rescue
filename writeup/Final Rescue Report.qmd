@@ -23,6 +23,7 @@ format:
 **link to paradigm:** <https://lprqrm1jep.cognition.run>
 **link to my current analysis code pipeline:** <https://github.com/psych251/schechtman2010_rescue/blob/main/analysis/pilotB_analysis.ipynb>
 **link to my cleaned participant data for my pilots and experiment:** <https://github.com/psych251/schechtman2010_rescue/tree/main/data>
+**link to OSF preregistration:** <https://osf.io/e5v3p>
 
 ## Summary of prior replication attempt
 

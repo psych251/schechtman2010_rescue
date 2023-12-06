@@ -53,6 +53,7 @@ rsconnect/
 !data/pilotA/subject_data_pilotA_processed.csv
 # !data/pilotB_testing/subject_data_pilotB_test_processed.csv
 !data/pilotB_naive/subject_data_pilotB_full_processed.csv
+!data/final_sample/subject_data_final_full_processed.csv
 
 # unless they end with -anon
 !*-anon.csv
