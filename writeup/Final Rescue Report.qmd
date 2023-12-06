@@ -20,7 +20,7 @@ format:
 
 **original paper link:** <https://github.com/psych251/schechtman2010_rescue/blob/main/original_paper/10460.pdf>
 
-**link to paradigm:** <https://gtebe407ak.cognition.run>
+**link to paradigm:** <https://lprqrm1jep.cognition.run>
 **link to my current analysis code pipeline:** <https://github.com/psych251/schechtman2010_rescue/blob/main/analysis/pilotB_analysis.ipynb>
 **link to my cleaned participant data for my pilots and experiment:** <https://github.com/psych251/schechtman2010_rescue/tree/main/data>
 
@@ -77,7 +77,7 @@ To quantify the generalization rates for individual subject, I will:
 To understand the acquisition stage, I will qualitatively look at the rate of acquisition on average to better understand how well participants understood the task and were able to learn the tone/valence correspondence.
 
 **Clarify key analysis of interest here**  
-The key analysis of interest is the paired t-test between the postively valenced and negatively valenced generalization curves.
+The key analysis of interest is the paired t-test between the postively valenced and negatively valenced generalization curves. In the original paper they got a p < 0.001 for their paired t-test (they did not provide a t value), showing that there was significantly more generalization for the negative tone than the positive one. In the 1st replication, they got a t = 4.363 in their linear model comparison, but the positive generalization was larger than the negative one (the opposite of the first study).
 
 ### Differences from Original Study and 1st replication
 
