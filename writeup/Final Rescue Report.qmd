@@ -71,7 +71,7 @@ For data exclusion: I auto-excluded participants who, on prolific, did not answe
 
 To quantify the generalization rates for individual subject, I will:
 
-1) In the generalization stage, measure the drop in response rate per 1 Hz of tone (which is the slop of the generalization curve) for the surround tones of both the positive and negative tones. I will then compare these positive/negative slopes using a paired t-test (within-subject). I will then look at all comparisons that are reported as significant and check if they are also significant at the same level using nonparametric Wilcoxon signed rank test. Next, I will likely use a "three-way ANOVA to check the effects and interactions of reinforcement type (negative/positive/neutral), the frequency distance (in Hz) from the original tone [0, 5, 20, 60, 100] and the side/direction of the frequency change [higher/lower than the original tone]".
+1) In the generalization stage, measure the drop in response rate per 1 Hz of tone (which is the slope of the generalization curve) for the surround tones of both the positive and negative tones. I will then compare these positive/negative slopes using a paired t-test (within-subject). I will then look at all comparisons that are reported as significant and check if they are also significant at the same level using nonparametric Wilcoxon signed rank test. Next, I will likely use a "three-way ANOVA to check the effects and interactions of reinforcement type (negative/positive/neutral), the frequency distance (in Hz) from the original tone [0, 5, 20, 60, 100] and the side/direction of the frequency change [higher/lower than the original tone]".
 
 2) In the generalization stage, I will "fit a multinomial logistic regression for each subject using all single trial (0/1—correct/incorrect) responses...In this model, the coefficient β1 describes the contribution of the reinforcement type to the response. The higher β1 is, the narrower the generalization curve is." I will then compare the β1 coefficients of positive and negative data using t tests for each subject, and will incorporate the p-values in "Fisher's combined p-value calculation to obtain an overall p-value for the population."
 
@@ -102,23 +102,214 @@ You can comment this section out prior to final report with data collection.
 
 ### Data preparation
 
-Data preparation following the analysis plan.
-	
-```{r include=F}
-### Data Preparation
-
+Data preparation following the analysis plan:
+```{r}
 #### Load Relevant Libraries and Functions
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(ggpubr)
+library(rstatix)
+library(nnet)
 
-#### Import data
-
-#### Data exclusion / filtering
-
-#### Prepare data for analysis - create columns etc.
+# preprocessing was done in python, in analysis/pilotB_analysis.ipynb
+full_data = read.csv('../data/final_sample/subject_data_final_full_processed.csv')
 ```
+
+Now lets look at the control checks and filter out everyone who answered "no" to any of the sound test questions:
+```{r}
+### Data exclusion / filtering
+### filter out people who didn't answer that they could hear sounds:
+
+# get all control questions
+control_data = full_data %>%
+  filter(trial_type == 'audio-button-response')
+
+# check which participants did not answer "I can hear this" to 2 or more questions (button_pressed = 0)
+exclude = control_data %>%
+  filter(button_pressed != 0) %>%
+  mutate(run_id = as.integer(run_id))
+
+run_id_counts <- exclude %>%
+  count(run_id)
+
+run_id_counts_fin <- run_id_counts %>%
+  filter(n != 1)
+
+exclusion_participants = unique(run_id_counts_fin$run_id)
+
+# outputs the IDs of participants to exclude
+full_data$exclude = full_data$run_id %in% exclusion_participants
+
+# excludes them from the full_data 
+data = full_data %>%
+  filter(exclude == FALSE)
+```
+We excluded these two participants (7 and 26) for not properly answering the attention checks about hearing sounds. 
+
+Now lets get the generalization data:
+```{r}
+### Data exclusion / filtering
+### filter out people who didn't answer that they could here sounds: #TODO
+
+## get the generalization dataset
+generalization_data = data %>% 
+  filter(stage=='generalization' & valence != 'control')
+
+generalization_data$match = as.character(generalization_data$valence) == as.character(generalization_data$key_responses)
+
+generalization_data$direction = ifelse(generalization_data$distance==0,0,ifelse(generalization_data$distance < 0,-1,1))
+
+hypothesis_space = generalization_data %>% 
+  filter(stage=='generalization' & valence!='control')  %>%
+  mutate(distance = abs(distance)) %>% 
+  select(valence, distance, match, run_id, correct, key_responses, rt, positive_key,direction)
+```
+
+Now we will plot the generalization curves for the positive and negative tones across subjects: 
+```{r}
+## do the generalization plots
+hypothesis_space %>% 
+  group_by( valence, distance) %>% 
+  summarise(p_association = mean(match, na.rm = TRUE ), 
+            sem = sd(match, na.rm = TRUE)/sqrt(length(match)),
+            y_lower = p_association-sem, 
+            y_upper = p_association+sem) %>%
+  ggplot(aes(x=distance, y=p_association, color=valence)) + 
+    geom_line(aes(color=valence), size=1.5) + 
+    geom_errorbar(aes(ymin=y_lower, ymax=y_upper), size=1) + 
+    ggtitle('A "Rescue" of of Schechtman et al. 2010?')
+```
+And now for the main statistical tests of interest:
+```{r}
+# generalization data analysis:
+# linear model analysis:
+summary(lm('match ~ valence * distance', hypothesis_space))
+```
+```{r}
+# paired t-test analysis
+# Split the data by distance and perform paired t-tests for each distance
+results_list <- by(hypothesis_space, hypothesis_space$distance, function(subdata) {
+  t_test_result <- t.test(subdata$match ~ subdata$valence, paired = TRUE)
+  return(t_test_result)
+})
+results_df <- do.call(rbind, lapply(results_list, tidy))
+table_df <- results_df[, c("estimate", "p.value")]
+colnames(table_df) <- c("Mean_Difference (negative valence - positive valence)", "P_Value")
+table_df$Distance <- unique(hypothesis_space$distance)
+table_df <- table_df[order(table_df$Distance), ]
+
+print(table_df)
+```
+
+```{r}
+# two way ANOVA
+# to compare the positive and negative valenced slopes:
+anova_model <- aov(match ~ valence * distance, data = hypothesis_space)
+summary_anova <- summary(anova_model)
+print(summary_anova)
+```
+```{r}
+# three way ANOVA
+# to compare the positive and negative valenced slopes, vs distance, vs direction of distance:
+anova_model_three <- aov(match ~ valence * distance * direction, data = hypothesis_space)
+summary_anova_three <- summary(anova_model_three)
+print(summary_anova_three)
+```
+
+```{r}
+# "fit a multinomial logistic regression for each subject using all single trial (0/1—correct/incorrect) responses...In this model, the coefficient β1 describes the contribution of the reinforcement type to the response. The higher β1 is, the narrower the generalization curve is." I will then compare the β1 coefficients of positive and negative data using t tests for each subject, and will incorporate the p-values in "Fisher's combined p-value calculation to obtain an overall p-value for the population."
+
+# calculate the t-test values for each subject:
+subject_ids <- unique(generalization_data$run_id)
+
+models <- list()
+t_test_p_values <- numeric(length(subject_ids))
+
+for (subject_id in subject_ids) {
+  subject_data <- subset(generalization_data, run_id == subject_id)
+  subject_data$valence <- factor(subject_data$valence, levels = c("negative", "positive"))
+
+  model <- glm(match ~ valence, data = subject_data, family = binomial)
+  models[[as.character(subject_id)]] <- model
+  
+  # Perform t-test for each subject
+  t_test_result <- t.test(match ~ valence, data = subject_data)
+  t_test_p_values[subject_id] <- t_test_result$p.value
+}
+
+# Perform Fisher's method on the p-values
+# remove NA values and 0 values
+t_test_p_values <- t_test_p_values[!is.na(t_test_p_values)]
+print(t_test_p_values)
+```
+Because there are several p-values of 0 in the results, it is not possible to truly calculate Fisher's combined t-test as I initially planned. However, to get a sense of our results, I will calculate this value by removing the 0 values.
+
+```{r}
+# get rid of zero values
+final_ps <- t_test_p_values[t_test_p_values>0]
+
+chi_squared_stat <- -2 * sum(log(final_ps))
+
+# Calculate the overall Fishers combined p-value
+df <- 2 * length(final_ps)
+overall_p_value <- pchisq(chi_squared_stat, df = df, lower.tail = FALSE)
+
+cat("Fisher's Combined p-value:", overall_p_value, "\n")
+
+```
+
+Now we can look at how fast participants learned in the first acquisition block (excluding pavlovian trials):
+```{r}
+# data pre-processing and plotting of acquisition
+acquisition_data = data %>%
+  filter(stage=='acquisition' & valence!='neutral' & !is.na(data$rt) & !is.na(data$i_acquisition_trial))
+
+acquisition_data$match = as.character(acquisition_data$valence) == as.character(acquisition_data$key_responses)
+
+acquisition_data
+
+acquisition_data %>% 
+  filter(i_block==1 )%>% 
+  group_by(i_acquisition_trial, valence) %>% 
+  summarise(mean_one = mean(match), 
+            sem_one = sd(match)/sqrt(length(match))) %>% 
+  mutate(combined_trial = ifelse(i_acquisition_trial%%2, i_acquisition_trial-1, i_acquisition_trial)) %>% 
+  group_by(combined_trial, valence) %>% 
+  summarise(mean_two=mean(mean_one), 
+            sem_two=mean(sem_one)) %>% 
+  ggplot(aes(x=combined_trial, y=mean_two, color=valence)) + 
+    geom_line(size=1.2) + 
+    geom_errorbar(aes(ymin=mean_two-sem_two, ymax=mean_two+sem_two), size=1) + 
+    ggtitle('Learning curves across the first acquisition stage') 
+
+```
+Let's look at the average rate of correct answers per acquisition stage, to see how people learned:
+```{r}
+
+acquisition_data %>% 
+  filter(i_block==1)  %>% 
+  group_by(run_id) %>% 
+  summarise(accuracy=mean(match)) %>% 
+  summarise(mean=mean(accuracy))
+
+acquisition_data %>% 
+  filter(i_block==2)  %>% 
+  group_by(run_id) %>% 
+  summarise(accuracy=mean(match)) %>% 
+  summarise(mean=mean(accuracy))
+
+acquisition_data %>% 
+  filter(i_block==3)  %>% 
+  group_by(run_id) %>% 
+  summarise(accuracy=mean(match)) %>% 
+  summarise(mean=mean(accuracy))
+```
+We can see that the average learning rate across acquisition stages is going up across participants, from 0.9063492 in stage 1, to 0.9674603 in stage 2, to 0.9834055 in stage 3. 
 
 ### Results of control measures
 
-How did people perform on any quality control checks or positive and negative controls? 
+We had three control questions which asked if participants could hear a sound. In the preregistration, we decided to exclude anyone who answers they can't hear it on more than one question. After checking this for each participant, I found that one participant said this once, and another said it twice. The rest answered that they can hear for every question. Thus, we excluded one participant (participant 26) due to our control measures.
 
 ### Confirmatory analysis
 
