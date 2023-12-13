@@ -111,6 +111,8 @@ library(ggpubr)
 library(rstatix)
 library(nnet)
 library(png) 
+library(cowplot)
+
 
 # preprocessing was done in python, in analysis/pilotB_analysis.ipynb
 full_data = read.csv('../data/final_sample/subject_data_final_full_processed.csv')
@@ -379,18 +381,48 @@ Finally, to examine how well participants learned across the 3 acquisition stage
 
 ### Exploratory analyses
 
-There were no follow-up analyses conducted. 
+Similar to what the first replication did, it is interesting to look at whether there are differences in learning the positive vs negative valence tone. Although they are counterbalanced, this may be possible due to a difference in the way the tones are encoded when rewarding vs aversive. 
+
+```{r echo=TRUE}
+# creates the graphs
+zero_distance = filter(hypothesis_space, distance==0)
+
+plot_hits = zero_distance %>%  
+  group_by(valence, run_id) %>% 
+  summarise(avg_correct_hit = mean(match)) %>% 
+  ggplot(aes(x=valence, y=avg_correct_hit)) + 
+    geom_jitter(aes(color=valence), width=.01) + 
+    ggtitle("Subject-level accuracy \ntone identification in \n generalization stage\n")
+
+plot_rts = zero_distance %>% 
+  group_by(valence, run_id) %>% 
+  summarise(avg_rt = mean(rt, na.rm = TRUE)) %>% 
+  ggplot(aes(x=valence, y=avg_rt)) + 
+    geom_jitter(aes(color=valence), width=.01) + 
+    ggtitle("Average subject-level \n reaction times")
+
+# plots them side by side
+plot_grid(plot_hits, plot_rts)
+
+```
+Qualitatively, there doesn't seem to be a large difference between the two, but let's look at a model comparison:
+
+```{r echo=TRUE}
+summary(lm('match ~ valence ', zero_distance))
+```
+```{r echo=TRUE}
+summary(lm('rt ~ valence ', zero_distance))
+```
+Interestingly, it seems as if there is both a significance difference between positive/negative valence accuracies in the generalization stage (with people more accurately hitting positively valenced tones), as well as a significance difference in how valence affects reaction times in the generalization stage (with positive valenced tones having shorter reaction times). This could represent the over-generalization that occurs in the positively valenced surrounding tones (people tend to locate positive-ranged tones more). Additionally, this represents people responding faster when the tone is in the positive-valence range, which could also be a symptom of generalizing more easily in the positive range.
 
 ## Discussion
 
 ## Mini meta analysis
-Combining across the original paper, 1st replication, and 2nd replication, what is the aggregate effect size? 
-
-Due to a lack of information in the original paper, I was not able to calculate the effect size of it. However, I post-hoc calculated the effect size of the first replication to be 0.1449508, and calculated the effect size of this rescue to be 0.09934809.
+Due to a lack of information in the original paper, I was not able to calculate the effect size of it without simulations. However, I post-hoc calculated the effect size of the first replication to be 0.1449508, and calculated the effect size of this rescue to be 0.09934809. I did this using the G*Power application. These are both "small" effect sizes, and thus it could be interesting to replicate this again but with a much larger sample size.
 
 ### Summary of Replication Attempt
 
-Overall, this rescue's primary result was that the generalization curve of positively valenced stimuli is significantly wider than that of the negatively valenced stimuli, when using a paired t-test within a linear model. This is the same main result as the first replication, and the opposite finding of the original paper (which found that negatively valenced stimuli curves were wider significantly than negatively valenced stimuli curves). However, despite the opposite directional finding, this rescue also found that valence and distance of the sound stimuli were significant (ANOVA), while sound change direction was not (ANOVA). This was found in the original paper as well. Thus, this rescue partially replicated the original result, and fully replicated the first replication, as it found similar statistical results but in the opposite direction from the original paper. Within the scale of [0,0.25,0.50,0.75,1], I would say this replicated at a 0.50 level. 
+Overall, this rescue's primary result was that the generalization curve of positively valenced stimuli is significantly wider than that of the negatively valenced stimuli, when using a paired t-test within a linear model. This is the same main result as the first replication, and the opposite finding of the original paper (which found that negatively valenced stimuli curves were wider significantly than negatively valenced stimuli curves). However, despite the opposite pattern finding, this rescue also found that valence and distance of the sound stimuli were significant (ANOVA), while the direction of the sound change was not (ANOVA). These statistical relationships were found in the original paper as well. Thus, this rescue partially replicated the original result, and fully replicated the first replication, as it found similar statistical results but in the opposite direction from the original paper. Within the scale of [0,0.25,0.50,0.75,1], I would say this replicated at a 0.25 level. 
 
 ### Commentary
 

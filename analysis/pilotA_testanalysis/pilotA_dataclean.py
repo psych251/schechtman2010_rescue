@@ -39,31 +39,38 @@ data['association'] = np.nan
 
 mapping = {'p':80, 'q':81, 'space':32}
 
+# EXCLUDE COLS THAT YOU WON'T NEED FOR THE FULL ANALYSIS
+drop_cols = ["recorded_at","source_code_version","ip","user_agent","device","browser",
+                "browser_version","platform","platform_version","referer","accept_language",
+                "internal_node_id","view_history","trial_info","condition"]
+for col in drop_cols:
+    data.drop(col, inplace=True, axis=1)
+    
 print(data.run_id.unique())
-for i_subject in data.run_id.unique(): 
-    for i_valence in ['positive', 'negative']: 
+# for i_subject in data.run_id.unique(): 
+#     for i_valence in ['positive', 'negative']: 
         
-        # conditions = (data.run_id==i_subject) * (data.valence==i_valence) * (data.stage=='instrumental')
-        # print(data.run_id==i_subject)
-        # print(data.valence==i_valence)
-        # print(data.stage=='instrumental')
-        # print("conditions:")
-        # print(conditions)
-        # print("conditions rows:")
-        if (i_subject != 1 & i_valence != 'positive'):
-            "test"
-            continue
-        print(data[data.run_id==i_subject])
-        # print(data[conditions])
-        # # get the key value and map it to the numerical value
-        # if data[conditions].empty:
-        #     print("df is empty?")
-        #     continue
-        # else:
-        #     i_key = mapping[np.unique(data[conditions]['correct_response'])[0]]
+#         # conditions = (data.run_id==i_subject) * (data.valence==i_valence) * (data.stage=='instrumental')
+#         # print(data.run_id==i_subject)
+#         # print(data.valence==i_valence)
+#         # print(data.stage=='instrumental')
+#         # print("conditions:")
+#         # print(conditions)
+#         # print("conditions rows:")
+#         if (i_subject != 1 & i_valence != 'positive'):
+#             "test"
+#             continue
+#         print(data[data.run_id==i_subject])
+#         # print(data[conditions])
+#         # # get the key value and map it to the numerical value
+#         # if data[conditions].empty:
+#         #     print("df is empty?")
+#         #     continue
+#         # else:
+#         #     i_key = mapping[np.unique(data[conditions]['correct_response'])[0]]
         
-        # # update subject valence-key mapping 
-        # data['%s_key'%i_valence][data.subject==i_subject] = int(i_key)
+#         # # update subject valence-key mapping 
+#         # data['%s_key'%i_valence][data.subject==i_subject] = int(i_key)
         
 # save for later analysis
 data.to_csv('./data/pilotA/subject_data_pilotA_processed.csv')
