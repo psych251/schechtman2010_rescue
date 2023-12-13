@@ -1,5 +1,11 @@
-# Replication Project Template
+# Rescue Project
 
-This is a GitHub template to use for replications projects in PSYCH 251. Create a new repo using this as a template in order to use it.
+This is a rescue project for psych 251, for Sschechtman, Laufer, & Paz 2010, "Negative Valence Widens Generalization of Learning"
 
-The template contains the replication project template as well as a file called `anonymize.py` that you can run to remove personally-identifiable information from the data exported by Qualtrics. Just run `python anonymize.py` to anonymize all Qualtrics `csv` files in the `data` directory.
+Much of this code and methodology is based on the original replication by Tyler Bonnen.
+
+Link to final report: https://rpubs.com/nklevak/1129595
+
+Other links:
+Link to original paper: https://github.com/psych251/schechtman2010_rescue/blob/main/original_paper/10460.pdf
+Link to first replication report: https://rpubs.com/tyler/446885
