@@ -21,8 +21,11 @@ format:
 **original paper link:** <https://github.com/psych251/schechtman2010_rescue/blob/main/original_paper/10460.pdf>
 
 **link to paradigm:** <https://lprqrm1jep.cognition.run>
-**link to my current analysis code pipeline:** <https://github.com/psych251/schechtman2010_rescue/blob/main/analysis/pilotB_analysis.ipynb>
+
+**link to my pre-processing code pipeline:** <https://github.com/psych251/schechtman2010_rescue/blob/main/analysis/pilotB_analysis.ipynb>
+
 **link to my cleaned participant data for my pilots and experiment:** <https://github.com/psych251/schechtman2010_rescue/tree/main/data>
+
 **link to OSF preregistration:** <https://osf.io/e5v3p>
 
 ## Summary of prior replication attempt
@@ -88,22 +91,18 @@ Another difference between this rescue and the 1st replication is the addition o
 
 ### Methods Addendum (Post Data Collection)
 
-You can comment this section out prior to final report with data collection.
-
 #### Actual Sample
-  Sample size, demographics, data exclusions based on rules spelled out in analysis plan
+  The actual sample ended up being 21 participants. It was 22 initially, as planned, but 1 participants had to be excluded due to prior exclusion criteria (answering that they couldn't hear the sound on more than 1 of the 3 control sound questions).
 
 #### Differences from pre-data collection methods plan
-  Any differences from what was described as the original plan, or “none”.
-
+  None.
 
 ## Results
-
 
 ### Data preparation
 
 Data preparation following the analysis plan:
-```{r}
+```{r echo=TRUE}
 #### Load Relevant Libraries and Functions
 library(tidyverse)
 library(ggplot2)
@@ -111,13 +110,14 @@ library(dplyr)
 library(ggpubr)
 library(rstatix)
 library(nnet)
+library(png) 
 
 # preprocessing was done in python, in analysis/pilotB_analysis.ipynb
 full_data = read.csv('../data/final_sample/subject_data_final_full_processed.csv')
 ```
 
 Now lets look at the control checks and filter out everyone who answered "no" to any of the sound test questions:
-```{r}
+```{r echo=TRUE}
 ### Data exclusion / filtering
 ### filter out people who didn't answer that they could hear sounds:
 
@@ -137,6 +137,7 @@ run_id_counts_fin <- run_id_counts %>%
   filter(n != 1)
 
 exclusion_participants = unique(run_id_counts_fin$run_id)
+exclusion_participants
 
 # outputs the IDs of participants to exclude
 full_data$exclude = full_data$run_id %in% exclusion_participants
@@ -145,13 +146,11 @@ full_data$exclude = full_data$run_id %in% exclusion_participants
 data = full_data %>%
   filter(exclude == FALSE)
 ```
-We excluded these two participants (7 and 26) for not properly answering the attention checks about hearing sounds. 
+We excluded this participant (26) for not properly answering the attention checks about hearing sounds. 
 
 Now lets get the generalization data:
-```{r}
+```{r echo=TRUE}
 ### Data exclusion / filtering
-### filter out people who didn't answer that they could here sounds: #TODO
-
 ## get the generalization dataset
 generalization_data = data %>% 
   filter(stage=='generalization' & valence != 'control')
@@ -167,7 +166,7 @@ hypothesis_space = generalization_data %>%
 ```
 
 Now we will plot the generalization curves for the positive and negative tones across subjects: 
-```{r}
+```{r echo=TRUE}
 ## do the generalization plots
 hypothesis_space %>% 
   group_by( valence, distance) %>% 
@@ -181,12 +180,12 @@ hypothesis_space %>%
     ggtitle('A "Rescue" of of Schechtman et al. 2010?')
 ```
 And now for the main statistical tests of interest:
-```{r}
+```{r echo=TRUE}
 # generalization data analysis:
-# linear model analysis:
+# t-test within linear model analysis:
 summary(lm('match ~ valence * distance', hypothesis_space))
 ```
-```{r}
+```{r echo=TRUE}
 # paired t-test analysis
 # Split the data by distance and perform paired t-tests for each distance
 results_list <- by(hypothesis_space, hypothesis_space$distance, function(subdata) {
@@ -202,14 +201,14 @@ table_df <- table_df[order(table_df$Distance), ]
 print(table_df)
 ```
 
-```{r}
+```{r echo=TRUE}
 # two way ANOVA
 # to compare the positive and negative valenced slopes:
 anova_model <- aov(match ~ valence * distance, data = hypothesis_space)
 summary_anova <- summary(anova_model)
 print(summary_anova)
 ```
-```{r}
+```{r echo=TRUE}
 # three way ANOVA
 # to compare the positive and negative valenced slopes, vs distance, vs direction of distance:
 anova_model_three <- aov(match ~ valence * distance * direction, data = hypothesis_space)
@@ -217,7 +216,7 @@ summary_anova_three <- summary(anova_model_three)
 print(summary_anova_three)
 ```
 
-```{r}
+```{r echo=TRUE}
 # "fit a multinomial logistic regression for each subject using all single trial (0/1—correct/incorrect) responses...In this model, the coefficient β1 describes the contribution of the reinforcement type to the response. The higher β1 is, the narrower the generalization curve is." I will then compare the β1 coefficients of positive and negative data using t tests for each subject, and will incorporate the p-values in "Fisher's combined p-value calculation to obtain an overall p-value for the population."
 
 # calculate the t-test values for each subject:
@@ -245,7 +244,7 @@ print(t_test_p_values)
 ```
 Because there are several p-values of 0 in the results, it is not possible to truly calculate Fisher's combined t-test as I initially planned. However, to get a sense of our results, I will calculate this value by removing the 0 values.
 
-```{r}
+```{r echo=TRUE}
 # get rid of zero values
 final_ps <- t_test_p_values[t_test_p_values>0]
 
@@ -260,14 +259,12 @@ cat("Fisher's Combined p-value:", overall_p_value, "\n")
 ```
 
 Now we can look at how fast participants learned in the first acquisition block (excluding pavlovian trials):
-```{r}
+```{r echo=TRUE}
 # data pre-processing and plotting of acquisition
 acquisition_data = data %>%
   filter(stage=='acquisition' & valence!='neutral' & !is.na(data$rt) & !is.na(data$i_acquisition_trial))
 
 acquisition_data$match = as.character(acquisition_data$valence) == as.character(acquisition_data$key_responses)
-
-acquisition_data
 
 acquisition_data %>% 
   filter(i_block==1 )%>% 
@@ -285,7 +282,7 @@ acquisition_data %>%
 
 ```
 Let's look at the average rate of correct answers per acquisition stage, to see how people learned:
-```{r}
+```{r echo=TRUE}
 
 acquisition_data %>% 
   filter(i_block==1)  %>% 
@@ -304,6 +301,9 @@ acquisition_data %>%
   group_by(run_id) %>% 
   summarise(accuracy=mean(match)) %>% 
   summarise(mean=mean(accuracy))
+
+# based on the output below:
+avg_corr <- c('1':0.9063492,'2':0.9674603,'3':0.9834055)
 ```
 We can see that the average learning rate across acquisition stages is going up across participants, from 0.9063492 in stage 1, to 0.9674603 in stage 2, to 0.9834055 in stage 3. 
 
@@ -313,23 +313,85 @@ We had three control questions which asked if participants could hear a sound. I
 
 ### Confirmatory analysis
 
-The analyses as specified in the analysis plan.  
+The **key analysis** was a t-test to compare the positively valenced and negatively valenced generalization curves. This was found using a linear model (just as Tyler Bonnen did it in his first replication). Similar to the first replication, I found that valence and distance both had significant p values (p ~ 0.000) (t = 4.387 and -7.100 respectively). However, unlike the first replication, the interaction between distance and valence was not significant. In the original paper, they found that "loss induced a much wider generalization curve than gain" with a p < 0.001. Thus, they also found that valence played a significant role. However, **while the key analysis result is similar in value (all three are significant), this rescue and the first replication both found the opposite directional finding than the original paper; that positive valence had a wider generalization curve than negative valence.** The graph comparisons of all three experiments are below:
 
-*Three-panel graph with original, 1st replication, and your replication is ideal here*
+
+```{r echo=TRUE}
+# read in the images
+img1<-readPNG('Final-Rescue-Report_file_imgs/schechtman_absolute.png')
+img2<-readPNG('Final-Rescue-Report_file_imgs/replication_absolute.png')
+img3 <- readPNG('Final-Rescue-Report_file_imgs/rescue_absolute.png')
+
+# Set up a 3x1 layout
+par(mfrow = c(1,3),mar = c(1, 1, 1, 1))
+par(pin = c(2, 2))
+
+# Plot the first image in the top panel with aspect ratio adjustment
+plot(1, type = "n", main = "Original", xlim = c(0, ncol(img1)), ylim = c(0, nrow(img1)),asp = ncol(img1) / nrow(img1))
+rasterImage(img1, 0, 0, ncol(img1), nrow(img1))
+
+# Plot the second image in the middle panel with aspect ratio adjustment
+plot(1, type = "n", main = "1st Replication", xlim = c(0, ncol(img2)), ylim = c(0, nrow(img2)),asp =ncol(img2) / (nrow(img2)))
+rasterImage(img2, 0, 0, ncol(img2), nrow(img2))
+
+# Plot the third image in the bottom panel with aspect ratio adjustment
+plot(1, type = "n", main = "Rescue", xlim = c(0, ncol(img3)), ylim = c(0, nrow(img3)),asp = ncol(img3) / nrow(img3))
+rasterImage(img3, 0, 0, ncol(img3), nrow(img3))
+
+# Reset the layout to a single-panel layout
+par(mfrow = c(1, 1))
+
+```
+
+Next, as stated in the analysis plan, I conducted a three-way ANOVA to check the how valence, distance, and change direction (whether the tone is above or below the original tone) interact. I found that valence and distance were significant predictors, but direction was not (nor were any of the interactions between these variables). This was what was found in the original paper as well (in the original paper direction was p=0.44 while in this rescue it was p= 0.517). 
+
+Next, I "fit a multinomial logistic regression for each subject using all single trial (0/1—correct/incorrect) responses...In this model, the coefficient β1 describes the contribution of the reinforcement type to the response. The higher β1 is, the narrower the generalization curve is" for the generalization stage. I then attempted to compare the β1 coefficients of positive and negative data using t tests for each subject, and to incorporate the p-values in "Fisher's combined p-value calculation to obtain an overall p-value for the population." For this analysis, I fit a multinomial log-reg for each subject and did a t-test for subject. However, once I did that, I realized that some of the t-test p-values were around 0 which made calculating the Fischer's combined p-value impossible if the zeros were included. Consequently, I removed the zeros and calculated it with the remaining values, to get a value of p =  0.0002757348 (the original paper got p < 0.01). While this corresponds to the statistical finding of the paper, it is in the opposite direction (positive generalizing more), and, furthermore, it is potentially not correct since I had to leave out some participant's p-values.
+
+Finally, I qualitatively looked at the rate of acquisition on average to better understand how well participants understood the task and were able to learn the tone/valence correspondence. First, I plotted the graph of the first acquisition stage (removing the pavlovian trials) to qualitatively examine the learning process. Below is a comparison between learning during the first stage of this rescue, the first replication, and the original paper. In all three, participants are learning at ceiling by the end of the first acquisition stage; additionally, qualitatively, participants appear to be learning at a higher accuracy earlier on in the rescue than in the replication. 
+
+```{r echo=TRUE}
+# read in the images
+img1<-readPNG('Final-Rescue-Report_file_imgs/schechtman_ac.png')
+img2<-readPNG('Final-Rescue-Report_file_imgs/replication_ac.png')
+img3 <- readPNG('Final-Rescue-Report_file_imgs/rescue_ac.png')
+
+# Set up a 3x1 layout
+par(mfrow = c(1,3),mar = c(1, 1, 1, 1))
+par(pin = c(2, 2))
+
+# Plot the first image in the top panel with aspect ratio adjustment
+plot(1, type = "n", main = "Original", xlim = c(0, ncol(img1)), ylim = c(0, nrow(img1)),asp = ncol(img1) / nrow(img1))
+rasterImage(img1, 0, 0, ncol(img1), nrow(img1))
+
+# Plot the second image in the middle panel with aspect ratio adjustment
+plot(1, type = "n", main = "1st Replication", xlim = c(0, ncol(img2)), ylim = c(0, nrow(img2)),asp =ncol(img2) / (nrow(img2)))
+rasterImage(img2, 0, 0, ncol(img2), nrow(img2))
+
+# Plot the third image in the bottom panel with aspect ratio adjustment
+plot(1, type = "n", main = "Rescue", xlim = c(0, ncol(img3)), ylim = c(0, nrow(img3)),asp = ncol(img3) / nrow(img3))
+rasterImage(img3, 0, 0, ncol(img3), nrow(img3))
+
+# Reset the layout to a single-panel layout
+par(mfrow = c(1, 1))
+
+```
+Finally, to examine how well participants learned across the 3 acquisition stages, I calculated the average correct rate per stage, and found that in stages 1-3, the average correct rates were: '1':0.9063492,'2':0.9674603,'3':0.9834055. 
 
 ### Exploratory analyses
 
-Any follow-up analyses desired (not required).  
+There were no follow-up analyses conducted. 
 
 ## Discussion
 
 ## Mini meta analysis
 Combining across the original paper, 1st replication, and 2nd replication, what is the aggregate effect size? 
 
+Due to a lack of information in the original paper, I was not able to calculate the effect size of it. However, I post-hoc calculated the effect size of the first replication to be 0.1449508, and calculated the effect size of this rescue to be 0.09934809.
+
 ### Summary of Replication Attempt
 
-Open the discussion section with a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result.  
+Overall, this rescue's primary result was that the generalization curve of positively valenced stimuli is significantly wider than that of the negatively valenced stimuli, when using a paired t-test within a linear model. This is the same main result as the first replication, and the opposite finding of the original paper (which found that negatively valenced stimuli curves were wider significantly than negatively valenced stimuli curves). However, despite the opposite directional finding, this rescue also found that valence and distance of the sound stimuli were significant (ANOVA), while sound change direction was not (ANOVA). This was found in the original paper as well. Thus, this rescue partially replicated the original result, and fully replicated the first replication, as it found similar statistical results but in the opposite direction from the original paper. Within the scale of [0,0.25,0.50,0.75,1], I would say this replicated at a 0.50 level. 
 
 ### Commentary
 
-Add open-ended commentary (if any) reflecting (a) insights from follow-up exploratory analysis, (b) assessment of the meaning of the replication (or not) - e.g., for a failure to replicate, are the differences between original and present study ones that definitely, plausibly, or are unlikely to have been moderators of the result, and (c) discussion of any objections or challenges raised by the current and original authors about the replication attempt.  None of these need to be long.
+This was a 'close' replication of the original paper, as it was held online instead of in person and had slight changes in stimuli. Since the directional pattern of the results did not replicate, but the significance of predictive factors did (i.e. valence and distance) it is interesting to consider why that is the case. Additionally, since both the first replication and this rescue got the same pattern, it seems to suggest that either the original paper's sample size led to an incorrect finding, or that transferring mediums from in-person to online makes a large difference. 
