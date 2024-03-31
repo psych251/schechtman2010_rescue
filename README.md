@@ -4,7 +4,7 @@ This is a rescue project for psych 251, for Sschechtman, Laufer, & Paz 2010, "Ne
 
 Much of this code and methodology is based on the original replication by Tyler Bonnen.
 
-Link to final report: https://rpubs.com/nklevak/1129595
+Link to final report: [https://rpubs.com/nklevak/1129595](https://rpubs.com/nklevak/1167949)
 
 Other links:
 Link to original paper: https://github.com/psych251/schechtman2010_rescue/blob/main/original_paper/10460.pdf
